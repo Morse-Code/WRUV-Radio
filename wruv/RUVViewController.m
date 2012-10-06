@@ -7,6 +7,7 @@
 //
 
 #import "RUVViewController.h"
+#import "IIViewDeckController.h"
 
 @interface RUVViewController ()
 
@@ -18,6 +19,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"left" style:UIBarButtonItemStyleBordered target:self.viewDeckController action:@selector(toggleLeftView)];
 }
 
 - (void)didReceiveMemoryWarning

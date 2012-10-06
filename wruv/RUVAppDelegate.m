@@ -8,16 +8,25 @@
 
 #import "RUVAppDelegate.h"
 
+#import "IIViewDeckController.h"
+#import "RUVLeftViewController.h"
 #import "RUVViewController.h"
 
 @implementation RUVAppDelegate
+
+@synthesize centerController = _centerController;
+@synthesize leftController = _leftController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.viewController = [[RUVViewController alloc] initWithNibName:@"RUVViewController" bundle:nil];
-    self.window.rootViewController = self.viewController;
+    self.leftController = [[RUVLeftViewController alloc] initWithNibName:@"RUVLeftViewController" bundle:nil];
+    RUVViewController *centerController = [[RUVViewController alloc] initWithNibName:@"RUVViewController" bundle:nil];
+    self.centerController = [[UINavigationController alloc] initWithRootViewController:centerController];
+    IIViewDeckController *deckController = [[IIViewDeckController alloc] initWithCenterViewController:self.centerController leftViewController:self.leftController];
+    
+    self.window.rootViewController = deckController;
     [self.window makeKeyAndVisible];
     return YES;
 }

@@ -18,6 +18,14 @@
 		0795F60016209D2A0010FFCC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0795F5FF16209D2A0010FFCC /* Default-568h@2x.png */; };
 		0795F60316209D2A0010FFCC /* RUVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0795F60216209D2A0010FFCC /* RUVViewController.m */; };
 		0795F60616209D2A0010FFCC /* RUVViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0795F60416209D2A0010FFCC /* RUVViewController.xib */; };
+		0795F61116209DE50010FFCC /* IIViewDeckController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0795F60E16209DE50010FFCC /* IIViewDeckController.m */; };
+		0795F61216209DE50010FFCC /* WrapController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0795F61016209DE50010FFCC /* WrapController.m */; };
+		0795F61816209F280010FFCC /* RUVLeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0795F61616209F280010FFCC /* RUVLeftViewController.m */; };
+		0795F61916209F280010FFCC /* RUVLeftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0795F61716209F280010FFCC /* RUVLeftViewController.xib */; };
+		0795F61F1620A0EA0010FFCC /* RUVSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0795F61D1620A0EA0010FFCC /* RUVSettingsViewController.m */; };
+		0795F6201620A0EA0010FFCC /* RUVSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0795F61E1620A0EA0010FFCC /* RUVSettingsViewController.xib */; };
+		0795F6261620A13D0010FFCC /* RUVScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0795F6241620A13D0010FFCC /* RUVScheduleViewController.m */; };
+		0795F6271620A13D0010FFCC /* RUVScheduleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0795F6251620A13D0010FFCC /* RUVScheduleViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +45,19 @@
 		0795F60116209D2A0010FFCC /* RUVViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RUVViewController.h; sourceTree = "<group>"; };
 		0795F60216209D2A0010FFCC /* RUVViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RUVViewController.m; sourceTree = "<group>"; };
 		0795F60516209D2A0010FFCC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RUVViewController.xib; sourceTree = "<group>"; };
+		0795F60D16209DE50010FFCC /* IIViewDeckController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IIViewDeckController.h; sourceTree = "<group>"; };
+		0795F60E16209DE50010FFCC /* IIViewDeckController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IIViewDeckController.m; sourceTree = "<group>"; };
+		0795F60F16209DE50010FFCC /* WrapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WrapController.h; sourceTree = "<group>"; };
+		0795F61016209DE50010FFCC /* WrapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WrapController.m; sourceTree = "<group>"; };
+		0795F61516209F280010FFCC /* RUVLeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RUVLeftViewController.h; sourceTree = "<group>"; };
+		0795F61616209F280010FFCC /* RUVLeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUVLeftViewController.m; sourceTree = "<group>"; };
+		0795F61716209F280010FFCC /* RUVLeftViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RUVLeftViewController.xib; sourceTree = "<group>"; };
+		0795F61C1620A0EA0010FFCC /* RUVSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RUVSettingsViewController.h; sourceTree = "<group>"; };
+		0795F61D1620A0EA0010FFCC /* RUVSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUVSettingsViewController.m; sourceTree = "<group>"; };
+		0795F61E1620A0EA0010FFCC /* RUVSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RUVSettingsViewController.xib; sourceTree = "<group>"; };
+		0795F6231620A13D0010FFCC /* RUVScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RUVScheduleViewController.h; sourceTree = "<group>"; };
+		0795F6241620A13D0010FFCC /* RUVScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUVScheduleViewController.m; sourceTree = "<group>"; };
+		0795F6251620A13D0010FFCC /* RUVScheduleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RUVScheduleViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,11 +104,13 @@
 		0795F5EF16209D2A0010FFCC /* wruv */ = {
 			isa = PBXGroup;
 			children = (
+				0795F60C16209DE50010FFCC /* ViewDeck */,
 				0795F5F816209D2A0010FFCC /* RUVAppDelegate.h */,
 				0795F5F916209D2A0010FFCC /* RUVAppDelegate.m */,
-				0795F60116209D2A0010FFCC /* RUVViewController.h */,
-				0795F60216209D2A0010FFCC /* RUVViewController.m */,
-				0795F60416209D2A0010FFCC /* RUVViewController.xib */,
+				0795F61B16209F5E0010FFCC /* CenterView */,
+				0795F61A16209F470010FFCC /* LeftView */,
+				0795F6211620A0F10010FFCC /* SettingsView */,
+				0795F6221620A1220010FFCC /* ScheduleView */,
 				0795F5F016209D2A0010FFCC /* Supporting Files */,
 			);
 			path = wruv;
@@ -105,6 +128,57 @@
 				0795F5FF16209D2A0010FFCC /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0795F60C16209DE50010FFCC /* ViewDeck */ = {
+			isa = PBXGroup;
+			children = (
+				0795F60D16209DE50010FFCC /* IIViewDeckController.h */,
+				0795F60E16209DE50010FFCC /* IIViewDeckController.m */,
+				0795F60F16209DE50010FFCC /* WrapController.h */,
+				0795F61016209DE50010FFCC /* WrapController.m */,
+			);
+			path = ViewDeck;
+			sourceTree = "<group>";
+		};
+		0795F61A16209F470010FFCC /* LeftView */ = {
+			isa = PBXGroup;
+			children = (
+				0795F61516209F280010FFCC /* RUVLeftViewController.h */,
+				0795F61616209F280010FFCC /* RUVLeftViewController.m */,
+				0795F61716209F280010FFCC /* RUVLeftViewController.xib */,
+			);
+			name = LeftView;
+			sourceTree = "<group>";
+		};
+		0795F61B16209F5E0010FFCC /* CenterView */ = {
+			isa = PBXGroup;
+			children = (
+				0795F60116209D2A0010FFCC /* RUVViewController.h */,
+				0795F60216209D2A0010FFCC /* RUVViewController.m */,
+				0795F60416209D2A0010FFCC /* RUVViewController.xib */,
+			);
+			name = CenterView;
+			sourceTree = "<group>";
+		};
+		0795F6211620A0F10010FFCC /* SettingsView */ = {
+			isa = PBXGroup;
+			children = (
+				0795F61C1620A0EA0010FFCC /* RUVSettingsViewController.h */,
+				0795F61D1620A0EA0010FFCC /* RUVSettingsViewController.m */,
+				0795F61E1620A0EA0010FFCC /* RUVSettingsViewController.xib */,
+			);
+			name = SettingsView;
+			sourceTree = "<group>";
+		};
+		0795F6221620A1220010FFCC /* ScheduleView */ = {
+			isa = PBXGroup;
+			children = (
+				0795F6231620A13D0010FFCC /* RUVScheduleViewController.h */,
+				0795F6241620A13D0010FFCC /* RUVScheduleViewController.m */,
+				0795F6251620A13D0010FFCC /* RUVScheduleViewController.xib */,
+			);
+			name = ScheduleView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +238,9 @@
 				0795F5FE16209D2A0010FFCC /* Default@2x.png in Resources */,
 				0795F60016209D2A0010FFCC /* Default-568h@2x.png in Resources */,
 				0795F60616209D2A0010FFCC /* RUVViewController.xib in Resources */,
+				0795F61916209F280010FFCC /* RUVLeftViewController.xib in Resources */,
+				0795F6201620A0EA0010FFCC /* RUVSettingsViewController.xib in Resources */,
+				0795F6271620A13D0010FFCC /* RUVScheduleViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +254,11 @@
 				0795F5F616209D2A0010FFCC /* main.m in Sources */,
 				0795F5FA16209D2A0010FFCC /* RUVAppDelegate.m in Sources */,
 				0795F60316209D2A0010FFCC /* RUVViewController.m in Sources */,
+				0795F61116209DE50010FFCC /* IIViewDeckController.m in Sources */,
+				0795F61216209DE50010FFCC /* WrapController.m in Sources */,
+				0795F61816209F280010FFCC /* RUVLeftViewController.m in Sources */,
+				0795F61F1620A0EA0010FFCC /* RUVSettingsViewController.m in Sources */,
+				0795F6261620A13D0010FFCC /* RUVScheduleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

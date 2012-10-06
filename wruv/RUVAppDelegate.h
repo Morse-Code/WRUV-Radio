@@ -14,6 +14,7 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) RUVViewController *viewController;
+@property (strong, nonatomic) UIViewController *centerController;
+@property (strong, nonatomic) UIViewController *leftController;
 
 @end
