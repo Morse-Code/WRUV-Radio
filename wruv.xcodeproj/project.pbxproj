@@ -26,6 +26,11 @@
 		0795F6201620A0EA0010FFCC /* RUVSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0795F61E1620A0EA0010FFCC /* RUVSettingsViewController.xib */; };
 		0795F6261620A13D0010FFCC /* RUVScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0795F6241620A13D0010FFCC /* RUVScheduleViewController.m */; };
 		0795F6271620A13D0010FFCC /* RUVScheduleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0795F6251620A13D0010FFCC /* RUVScheduleViewController.xib */; };
+		0795F6291620BD320010FFCC /* wruv.png in Resources */ = {isa = PBXBuildFile; fileRef = 0795F6281620BD320010FFCC /* wruv.png */; };
+		07E1042916247E9300BAA380 /* StreamModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E1042816247E9300BAA380 /* StreamModel.m */; };
+		07E1042D1624879D00BAA380 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E1042C1624879D00BAA380 /* MediaPlayer.framework */; };
+		07E1042F162487AA00BAA380 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E1042E162487AA00BAA380 /* CFNetwork.framework */; };
+		07E10431162487B900BAA380 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E10430162487B900BAA380 /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +63,12 @@
 		0795F6231620A13D0010FFCC /* RUVScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RUVScheduleViewController.h; sourceTree = "<group>"; };
 		0795F6241620A13D0010FFCC /* RUVScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUVScheduleViewController.m; sourceTree = "<group>"; };
 		0795F6251620A13D0010FFCC /* RUVScheduleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RUVScheduleViewController.xib; sourceTree = "<group>"; };
+		0795F6281620BD320010FFCC /* wruv.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wruv.png; sourceTree = "<group>"; };
+		07E1042716247E9300BAA380 /* StreamModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamModel.h; sourceTree = "<group>"; };
+		07E1042816247E9300BAA380 /* StreamModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreamModel.m; sourceTree = "<group>"; };
+		07E1042C1624879D00BAA380 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		07E1042E162487AA00BAA380 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		07E10430162487B900BAA380 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +76,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07E10431162487B900BAA380 /* AudioToolbox.framework in Frameworks */,
+				07E1042F162487AA00BAA380 /* CFNetwork.framework in Frameworks */,
+				07E1042D1624879D00BAA380 /* MediaPlayer.framework in Frameworks */,
 				0795F5EA16209D2A0010FFCC /* UIKit.framework in Frameworks */,
 				0795F5EC16209D2A0010FFCC /* Foundation.framework in Frameworks */,
 				0795F5EE16209D2A0010FFCC /* CoreGraphics.framework in Frameworks */,
@@ -77,6 +91,9 @@
 		0795F5DA16209D2A0010FFCC = {
 			isa = PBXGroup;
 			children = (
+				07E10430162487B900BAA380 /* AudioToolbox.framework */,
+				07E1042E162487AA00BAA380 /* CFNetwork.framework */,
+				07E1042C1624879D00BAA380 /* MediaPlayer.framework */,
 				0795F5EF16209D2A0010FFCC /* wruv */,
 				0795F5E816209D2A0010FFCC /* Frameworks */,
 				0795F5E616209D2A0010FFCC /* Products */,
@@ -104,6 +121,7 @@
 		0795F5EF16209D2A0010FFCC /* wruv */ = {
 			isa = PBXGroup;
 			children = (
+				07E1042B16247EA600BAA380 /* Streaming */,
 				0795F60C16209DE50010FFCC /* ViewDeck */,
 				0795F5F816209D2A0010FFCC /* RUVAppDelegate.h */,
 				0795F5F916209D2A0010FFCC /* RUVAppDelegate.m */,
@@ -157,6 +175,7 @@
 				0795F60116209D2A0010FFCC /* RUVViewController.h */,
 				0795F60216209D2A0010FFCC /* RUVViewController.m */,
 				0795F60416209D2A0010FFCC /* RUVViewController.xib */,
+				0795F6281620BD320010FFCC /* wruv.png */,
 			);
 			name = CenterView;
 			sourceTree = "<group>";
@@ -179,6 +198,15 @@
 				0795F6251620A13D0010FFCC /* RUVScheduleViewController.xib */,
 			);
 			name = ScheduleView;
+			sourceTree = "<group>";
+		};
+		07E1042B16247EA600BAA380 /* Streaming */ = {
+			isa = PBXGroup;
+			children = (
+				07E1042716247E9300BAA380 /* StreamModel.h */,
+				07E1042816247E9300BAA380 /* StreamModel.m */,
+			);
+			name = Streaming;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,6 +269,7 @@
 				0795F61916209F280010FFCC /* RUVLeftViewController.xib in Resources */,
 				0795F6201620A0EA0010FFCC /* RUVSettingsViewController.xib in Resources */,
 				0795F6271620A13D0010FFCC /* RUVScheduleViewController.xib in Resources */,
+				0795F6291620BD320010FFCC /* wruv.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +288,7 @@
 				0795F61816209F280010FFCC /* RUVLeftViewController.m in Sources */,
 				0795F61F1620A0EA0010FFCC /* RUVSettingsViewController.m in Sources */,
 				0795F6261620A13D0010FFCC /* RUVScheduleViewController.m in Sources */,
+				07E1042916247E9300BAA380 /* StreamModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +404,7 @@
 				0795F60B16209D2A0010FFCC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
