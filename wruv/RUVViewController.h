@@ -41,6 +41,7 @@
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object
                         change:(NSDictionary *)change context:(void *)context;
+- (void)updateMetadata;
 - (BOOL)isPlaying;
 - (void)showPauseButton;
 - (void)showPlayButton;

@@ -66,7 +66,8 @@
     // Receive remote events
 	[[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
     
-    [self.stationArt setImage:[UIImage imageNamed:@"wruv.png"]];
+//    [self.stationArt setImage:[UIImage imageNamed:@"wruv.png"]];
+    [self updateMetadata];
     
 }
 
@@ -78,14 +79,15 @@ static Float64 secondsWithCMTimeOrZeroIfInvalid(CMTime time) {
     return secondsWithCMTimeOrZeroIfInvalid(self.movieDuration);
 }
 
-- (void)handleDurationDidChange {
-    movieDuration = player.currentItem.duration;
-    NSLog(@"current duration : %@", movieDuration);
-}
+//- (void)handleDurationDidChange {
+//    movieDuration = player.currentItem.duration;
+//
+//}
 
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object
-                        change:(NSDictionary *)change context:(void *)context {
+                        change:(NSDictionary *)change context:(void *)context
+{
     
     if ([keyPath isEqualToString:@"status"]) {
         AVPlayerItem *pItem = (AVPlayerItem *)object;
@@ -95,7 +97,7 @@ static Float64 secondsWithCMTimeOrZeroIfInvalid(CMTime time) {
             [self playpause];
         }
     }
-    if ([keyPath isEqualToString:@"timedMetadata"] && [self isPlaying]) {
+    if ([keyPath isEqualToString:@"timedMetadata"] && [self isPlaying]){
         for (AVAssetTrack *track in player.currentItem.tracks) {
             for (AVPlayerItemTrack *item in player.currentItem.tracks) {
                 if ([item.assetTrack.mediaType isEqual:AVMediaTypeAudio]) {
@@ -110,6 +112,25 @@ static Float64 secondsWithCMTimeOrZeroIfInvalid(CMTime time) {
                     }
                 }
 			}
+        }
+    }
+}
+
+- (void)updateMetadata
+{
+    for (AVAssetTrack *track in player.currentItem.tracks) {
+        for (AVPlayerItemTrack *item in player.currentItem.tracks) {
+            if ([item.assetTrack.mediaType isEqual:AVMediaTypeAudio]) {
+                NSArray *meta = [playerItem timedMetadata];
+                for (AVMetadataItem *metaItem in meta) {
+                    if(nowplaying.hidden == YES) {
+                        nowplaying.hidden = NO;
+                    }
+                    NSString *source = metaItem.stringValue;
+                    //NSLog(@"meta %@",source);
+                    metadatas.text = source;
+                }
+            }
         }
     }
 }
