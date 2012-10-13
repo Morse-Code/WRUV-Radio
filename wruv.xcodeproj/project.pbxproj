@@ -17,7 +17,7 @@
 		0795F5FE16209D2A0010FFCC /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0795F5FD16209D2A0010FFCC /* Default@2x.png */; };
 		0795F60016209D2A0010FFCC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0795F5FF16209D2A0010FFCC /* Default-568h@2x.png */; };
 		0795F60316209D2A0010FFCC /* RUVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0795F60216209D2A0010FFCC /* RUVViewController.m */; };
-		0795F60616209D2A0010FFCC /* RUVViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0795F60416209D2A0010FFCC /* RUVViewController.xib */; };
+		0795F60616209D2A0010FFCC /* WRUVViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0795F60416209D2A0010FFCC /* WRUVViewController.xib */; };
 		0795F61116209DE50010FFCC /* IIViewDeckController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0795F60E16209DE50010FFCC /* IIViewDeckController.m */; };
 		0795F61216209DE50010FFCC /* WrapController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0795F61016209DE50010FFCC /* WrapController.m */; };
 		0795F61816209F280010FFCC /* RUVLeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0795F61616209F280010FFCC /* RUVLeftViewController.m */; };
@@ -27,10 +27,13 @@
 		0795F6261620A13D0010FFCC /* RUVScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0795F6241620A13D0010FFCC /* RUVScheduleViewController.m */; };
 		0795F6271620A13D0010FFCC /* RUVScheduleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0795F6251620A13D0010FFCC /* RUVScheduleViewController.xib */; };
 		0795F6291620BD320010FFCC /* wruv.png in Resources */ = {isa = PBXBuildFile; fileRef = 0795F6281620BD320010FFCC /* wruv.png */; };
+		07CEFAED1628E82A0050B011 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CEFAEB1628E82A0050B011 /* ViewController.m */; };
+		07CEFAEE1628E82A0050B011 /* RUVViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07CEFAEC1628E82A0050B011 /* RUVViewController.xib */; };
+		07CEFAF11628E8830050B011 /* addict.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 07CEFAF01628E8830050B011 /* addict.jpg */; };
+		07CEFAF71629001B0050B011 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CEFAF61629001B0050B011 /* AVFoundation.framework */; };
+		07CEFAFF1629010D0050B011 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CEFAFE1629010D0050B011 /* MediaPlayer.framework */; };
+		07CEFB01162902490050B011 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CEFB00162902490050B011 /* CoreMedia.framework */; };
 		07E1042916247E9300BAA380 /* StreamModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E1042816247E9300BAA380 /* StreamModel.m */; };
-		07E1042D1624879D00BAA380 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E1042C1624879D00BAA380 /* MediaPlayer.framework */; };
-		07E1042F162487AA00BAA380 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E1042E162487AA00BAA380 /* CFNetwork.framework */; };
-		07E10431162487B900BAA380 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E10430162487B900BAA380 /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,7 +52,7 @@
 		0795F5FF16209D2A0010FFCC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		0795F60116209D2A0010FFCC /* RUVViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RUVViewController.h; sourceTree = "<group>"; };
 		0795F60216209D2A0010FFCC /* RUVViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RUVViewController.m; sourceTree = "<group>"; };
-		0795F60516209D2A0010FFCC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RUVViewController.xib; sourceTree = "<group>"; };
+		0795F60516209D2A0010FFCC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/WRUVViewController.xib; sourceTree = "<group>"; };
 		0795F60D16209DE50010FFCC /* IIViewDeckController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IIViewDeckController.h; sourceTree = "<group>"; };
 		0795F60E16209DE50010FFCC /* IIViewDeckController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IIViewDeckController.m; sourceTree = "<group>"; };
 		0795F60F16209DE50010FFCC /* WrapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WrapController.h; sourceTree = "<group>"; };
@@ -64,11 +67,15 @@
 		0795F6241620A13D0010FFCC /* RUVScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUVScheduleViewController.m; sourceTree = "<group>"; };
 		0795F6251620A13D0010FFCC /* RUVScheduleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RUVScheduleViewController.xib; sourceTree = "<group>"; };
 		0795F6281620BD320010FFCC /* wruv.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wruv.png; sourceTree = "<group>"; };
+		07CEFAEA1628E82A0050B011 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		07CEFAEB1628E82A0050B011 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		07CEFAEC1628E82A0050B011 /* RUVViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RUVViewController.xib; sourceTree = "<group>"; };
+		07CEFAF01628E8830050B011 /* addict.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = addict.jpg; sourceTree = "<group>"; };
+		07CEFAF61629001B0050B011 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		07CEFAFE1629010D0050B011 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		07CEFB00162902490050B011 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		07E1042716247E9300BAA380 /* StreamModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamModel.h; sourceTree = "<group>"; };
 		07E1042816247E9300BAA380 /* StreamModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreamModel.m; sourceTree = "<group>"; };
-		07E1042C1624879D00BAA380 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
-		07E1042E162487AA00BAA380 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		07E10430162487B900BAA380 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,9 +83,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07E10431162487B900BAA380 /* AudioToolbox.framework in Frameworks */,
-				07E1042F162487AA00BAA380 /* CFNetwork.framework in Frameworks */,
-				07E1042D1624879D00BAA380 /* MediaPlayer.framework in Frameworks */,
+				07CEFAFF1629010D0050B011 /* MediaPlayer.framework in Frameworks */,
+				07CEFB01162902490050B011 /* CoreMedia.framework in Frameworks */,
+				07CEFAF71629001B0050B011 /* AVFoundation.framework in Frameworks */,
 				0795F5EA16209D2A0010FFCC /* UIKit.framework in Frameworks */,
 				0795F5EC16209D2A0010FFCC /* Foundation.framework in Frameworks */,
 				0795F5EE16209D2A0010FFCC /* CoreGraphics.framework in Frameworks */,
@@ -91,9 +98,6 @@
 		0795F5DA16209D2A0010FFCC = {
 			isa = PBXGroup;
 			children = (
-				07E10430162487B900BAA380 /* AudioToolbox.framework */,
-				07E1042E162487AA00BAA380 /* CFNetwork.framework */,
-				07E1042C1624879D00BAA380 /* MediaPlayer.framework */,
 				0795F5EF16209D2A0010FFCC /* wruv */,
 				0795F5E816209D2A0010FFCC /* Frameworks */,
 				0795F5E616209D2A0010FFCC /* Products */,
@@ -111,6 +115,9 @@
 		0795F5E816209D2A0010FFCC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				07CEFB00162902490050B011 /* CoreMedia.framework */,
+				07CEFAFE1629010D0050B011 /* MediaPlayer.framework */,
+				07CEFAF61629001B0050B011 /* AVFoundation.framework */,
 				0795F5E916209D2A0010FFCC /* UIKit.framework */,
 				0795F5EB16209D2A0010FFCC /* Foundation.framework */,
 				0795F5ED16209D2A0010FFCC /* CoreGraphics.framework */,
@@ -172,9 +179,13 @@
 		0795F61B16209F5E0010FFCC /* CenterView */ = {
 			isa = PBXGroup;
 			children = (
+				07CEFAF01628E8830050B011 /* addict.jpg */,
+				07CEFAEA1628E82A0050B011 /* ViewController.h */,
+				07CEFAEB1628E82A0050B011 /* ViewController.m */,
+				07CEFAEC1628E82A0050B011 /* RUVViewController.xib */,
 				0795F60116209D2A0010FFCC /* RUVViewController.h */,
 				0795F60216209D2A0010FFCC /* RUVViewController.m */,
-				0795F60416209D2A0010FFCC /* RUVViewController.xib */,
+				0795F60416209D2A0010FFCC /* WRUVViewController.xib */,
 				0795F6281620BD320010FFCC /* wruv.png */,
 			);
 			name = CenterView;
@@ -265,11 +276,13 @@
 				0795F5FC16209D2A0010FFCC /* Default.png in Resources */,
 				0795F5FE16209D2A0010FFCC /* Default@2x.png in Resources */,
 				0795F60016209D2A0010FFCC /* Default-568h@2x.png in Resources */,
-				0795F60616209D2A0010FFCC /* RUVViewController.xib in Resources */,
+				0795F60616209D2A0010FFCC /* WRUVViewController.xib in Resources */,
 				0795F61916209F280010FFCC /* RUVLeftViewController.xib in Resources */,
 				0795F6201620A0EA0010FFCC /* RUVSettingsViewController.xib in Resources */,
 				0795F6271620A13D0010FFCC /* RUVScheduleViewController.xib in Resources */,
 				0795F6291620BD320010FFCC /* wruv.png in Resources */,
+				07CEFAEE1628E82A0050B011 /* RUVViewController.xib in Resources */,
+				07CEFAF11628E8830050B011 /* addict.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +302,7 @@
 				0795F61F1620A0EA0010FFCC /* RUVSettingsViewController.m in Sources */,
 				0795F6261620A13D0010FFCC /* RUVScheduleViewController.m in Sources */,
 				07E1042916247E9300BAA380 /* StreamModel.m in Sources */,
+				07CEFAED1628E82A0050B011 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,12 +317,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		0795F60416209D2A0010FFCC /* RUVViewController.xib */ = {
+		0795F60416209D2A0010FFCC /* WRUVViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				0795F60516209D2A0010FFCC /* en */,
 			);
-			name = RUVViewController.xib;
+			name = WRUVViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -366,6 +380,10 @@
 		0795F60A16209D2A0010FFCC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "wruv/wruv-Prefix.pch";
 				INFOPLIST_FILE = "wruv/wruv-Info.plist";
@@ -377,6 +395,10 @@
 		0795F60B16209D2A0010FFCC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "wruv/wruv-Prefix.pch";
 				INFOPLIST_FILE = "wruv/wruv-Info.plist";

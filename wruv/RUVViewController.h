@@ -8,18 +8,50 @@
 
 #import <UIKit/UIKit.h>
 #import <MediaPlayer/MediaPlayer.h>
-#import <CFNetwork/CFNetwork.h>
-
-@interface RUVViewController : UIViewController
+#import <AVFoundation/AVFoundation.h>
 
 
+
+
+@class AVPlayer;
+@class AVPlayerItem;
+
+@interface RUVViewController : UIViewController {
+    AVAsset *asset;
+    AVPlayerItem *playerItem;
+    AVPlayer *player;
+    NSURL *wruvLive;
+    NSString *m3uPath;
+	IBOutlet UIView *airplay;
+    IBOutlet UILabel *nowplaying;
+    IBOutlet UILabel *metadatas;
+    IBOutlet UIToolbar *toolBar;
+    IBOutlet UIBarButtonItem *playButton;
+    IBOutlet UIBarButtonItem *pauseButton;
+}
+
+@property (nonatomic) BOOL *allowsAirPlay;
+@property (nonatomic, retain) IBOutlet UILabel *nowplaying;
+@property (nonatomic, retain) IBOutlet UILabel *metadatas;
+@property (retain) IBOutlet UIToolbar *toolBar;
+@property (retain) IBOutlet UIBarButtonItem *playButton;
+@property (retain) IBOutlet UIBarButtonItem *pauseButton;
+@property (nonatomic, assign) CMTime movieDuration;
 @property (nonatomic, assign) IBOutlet UIImageView *stationArt;
-@property (nonatomic, assign) IBOutlet UIButton *playButton;
-@property (nonatomic, assign) IBOutlet UIView *playControl;
-@property (nonatomic, retain) NSString *m3uPath;
-@property (nonatomic, retain) NSURL *wruvLive;
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object
+                        change:(NSDictionary *)change context:(void *)context;
+- (BOOL)isPlaying;
+- (void)showPauseButton;
+- (void)showPlayButton;
+- (void)playpause;
+- (void)enablePlayerButtons;
+- (void)disablePlayerButtons;
+- (IBAction)play:(id)sender;
+- (IBAction)pause:(id)sender;
+
+//@property (nonatomic, assign) IBOutlet UIView *playControl;
 //@property (nonatomic, assign) IBOutlet UIToolbar *controlBar;
 //@property (nonatomic, assign) IBOutlet UIBarButtonItem *menuButton;
 
-- (IBAction) playToggle:(UIButton *)sender;
 @end
