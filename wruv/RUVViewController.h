@@ -11,24 +11,24 @@
 #import <AVFoundation/AVFoundation.h>
 
 
-
-
 @class AVPlayer;
 @class AVPlayerItem;
 
-@interface RUVViewController : UIViewController {
+@interface RUVViewController : UIViewController
+{
     AVAsset *asset;
     AVPlayerItem *playerItem;
     AVPlayer *player;
     NSURL *wruvLive;
     NSString *m3uPath;
-	IBOutlet UIView *airplay;
+    IBOutlet UIView *airplay;
     IBOutlet UILabel *nowplaying;
     IBOutlet UILabel *metadatas;
     IBOutlet UIToolbar *toolBar;
     IBOutlet UIBarButtonItem *playButton;
     IBOutlet UIBarButtonItem *pauseButton;
 }
+
 
 @property (nonatomic) BOOL *allowsAirPlay;
 @property (nonatomic, retain) IBOutlet UILabel *nowplaying;
@@ -39,16 +39,27 @@
 @property (nonatomic, assign) CMTime movieDuration;
 @property (nonatomic, assign) IBOutlet UIImageView *stationArt;
 
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object
-                        change:(NSDictionary *)change context:(void *)context;
+- (void)observeValueForKeyPath:(NSString *)keyPath
+                      ofObject:(id)object
+                        change:(NSDictionary *)change
+                       context:(void *)context;
+
 - (void)updateMetadata;
+
 - (BOOL)isPlaying;
+
 - (void)showPauseButton;
+
 - (void)showPlayButton;
+
 - (void)playpause;
+
 - (void)enablePlayerButtons;
+
 - (void)disablePlayerButtons;
+
 - (IBAction)play:(id)sender;
+
 - (IBAction)pause:(id)sender;
 
 //@property (nonatomic, assign) IBOutlet UIView *playControl;

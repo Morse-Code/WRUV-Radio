@@ -10,7 +10,8 @@
 
 @class RUVViewController;
 
-@interface RUVAppDelegate : UIResponder <UIApplicationDelegate>
+@interface RUVAppDelegate : UIResponder < UIApplicationDelegate >
+
 
 @property (strong, nonatomic) UIWindow *window;
 
