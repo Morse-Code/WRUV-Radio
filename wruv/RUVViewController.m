@@ -104,21 +104,7 @@ static Float64 secondsWithCMTimeOrZeroIfInvalid(CMTime time)
         }
     }
     if ([keyPath isEqualToString:@"timedMetadata"] && [self isPlaying]) {
-        for (AVAssetTrack *track in player.currentItem.tracks) {
-            for (AVPlayerItemTrack *item in player.currentItem.tracks) {
-                if ([item.assetTrack.mediaType isEqual:AVMediaTypeAudio]) {
-                    NSArray *meta = [playerItem timedMetadata];
-                    for (AVMetadataItem *metaItem in meta) {
-                        if (nowplaying.hidden == YES) {
-                            nowplaying.hidden = NO;
-                        }
-                        NSString *source = metaItem.stringValue;
-                        //NSLog(@"meta %@",source);
-                        metadatas.text = source;
-                    }
-                }
-            }
-        }
+        [self updateMetadata];
     }
 }
 
