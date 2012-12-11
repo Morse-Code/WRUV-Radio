@@ -27,15 +27,16 @@
 //  THE SOFTWARE.
 //
 
+#import <MWFeedParser/NSString+HTML.h>
+
 #import "RootViewController.h"
-#import "NSString+HTML.h"
-#import "MWFeedParser.h"
 #import "DetailTableViewController.h"
+//#import "NSString+HTML.h"
 
 @implementation RootViewController
 
 @synthesize itemsToDisplay;
-
+@synthesize feedString = _feedString;
 #pragma mark -
 #pragma mark View lifecycle
 
@@ -57,7 +58,7 @@
                                                                                            target:self 
                                                                                            action:@selector(refresh)];
 	// Parse
-	NSURL *feedURL = [NSURL URLWithString:@"http://images.apple.com/main/rss/hotnews/hotnews.rss"];
+	NSURL *feedURL = [NSURL URLWithString:_feedString];
 	feedParser = [[MWFeedParser alloc] initWithFeedURL:feedURL];
 	feedParser.delegate = self;
 	feedParser.feedParseType = ParseTypeFull; // Parse feed info and all items

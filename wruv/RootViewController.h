@@ -28,11 +28,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MWFeedParser.h"
+#import <MWFeedParser/MWFeedParser.h>
+//#import "MWFeedParser.h"
 
 @interface RootViewController : UITableViewController <MWFeedParserDelegate> {
 	
 	// Parsing
+
 	MWFeedParser *feedParser;
 	NSMutableArray *parsedItems;
 	
@@ -44,5 +46,6 @@
 
 // Properties
 @property (nonatomic, retain) NSArray *itemsToDisplay;
+@property (nonatomic, retain)     NSString *feedString;
 
 @end

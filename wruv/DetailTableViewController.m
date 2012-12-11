@@ -27,8 +27,9 @@
 //  THE SOFTWARE.
 //
 
+#import <MWFeedParser/MWFeedItem.h>
+#import <MWFeedParser/NSString+HTML.h>
 #import "DetailTableViewController.h"
-#import "NSString+HTML.h"
 
 typedef enum { SectionHeader, SectionDetail } Sections;
 typedef enum { SectionHeaderTitle, SectionHeaderDate, SectionHeaderURL } HeaderRows;
@@ -159,7 +160,7 @@ typedef enum { SectionDetailSummary } DetailRows;
 		if (summaryString) summary = summaryString;
 		CGSize s = [summary sizeWithFont:[UIFont systemFontOfSize:15] 
 					   constrainedToSize:CGSizeMake(self.view.bounds.size.width - 40, MAXFLOAT)  // - 40 For cell padding
-						   lineBreakMode:UILineBreakModeWordWrap];
+						   lineBreakMode:NSLineBreakByWordWrapping];
 		return s.height + 16; // Add padding
 		
 	}

@@ -28,7 +28,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MWFeedItem.h"
+
+@class MWFeedItem;
 
 @interface DetailTableViewController : UITableViewController {
 	MWFeedItem *item;
