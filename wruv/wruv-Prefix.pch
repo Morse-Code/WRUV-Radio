@@ -12,5 +12,8 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
+#import "RUVAppDelegate.h"
+
+#define SharedAppDelegate ((RUVAppDelegate*)[[UIApplication sharedApplication] delegate])
 
 #endif

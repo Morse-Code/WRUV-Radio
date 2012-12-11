@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MWFeedParser/MWFeedParser.h>
 
-@interface RUVLeftViewController : UITableViewController
+
+@interface RUVLeftViewController : UITableViewController 
 
 
 @end

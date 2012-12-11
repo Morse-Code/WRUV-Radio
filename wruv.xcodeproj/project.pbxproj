@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		078C00FB1676F8960052E2FC /* libMWFeedParser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 078C00F71676F7B20052E2FC /* libMWFeedParser.a */; };
+		078C010816770D000052E2FC /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 078C010516770D000052E2FC /* RootViewController.m */; };
+		078C010916770D000052E2FC /* DetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 078C010716770D000052E2FC /* DetailTableViewController.m */; };
+		078C010C1677101D0052E2FC /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 078C010B1677101D0052E2FC /* RootViewController.xib */; };
 		0795F5EA16209D2A0010FFCC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0795F5E916209D2A0010FFCC /* UIKit.framework */; };
 		0795F5EC16209D2A0010FFCC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0795F5EB16209D2A0010FFCC /* Foundation.framework */; };
 		0795F5EE16209D2A0010FFCC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0795F5ED16209D2A0010FFCC /* CoreGraphics.framework */; };
@@ -33,7 +37,30 @@
 		07CEFB01162902490050B011 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CEFB00162902490050B011 /* CoreMedia.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		078C00F61676F7B20052E2FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 078C00EB1676F7B20052E2FC /* MWFeedParser.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D13A887D1549FE99006A7AA1;
+			remoteInfo = libMWFeedParser;
+		};
+		078C00F91676F8790052E2FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 078C00EB1676F7B20052E2FC /* MWFeedParser.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D13A887C1549FE99006A7AA1;
+			remoteInfo = libMWFeedParser;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		078C00EB1676F7B20052E2FC /* MWFeedParser.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MWFeedParser.xcodeproj; path = "../MWFeedParser-master 2/MWFeedParser.xcodeproj"; sourceTree = "<group>"; };
+		078C010416770D000052E2FC /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		078C010516770D000052E2FC /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		078C010616770D000052E2FC /* DetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTableViewController.h; sourceTree = "<group>"; };
+		078C010716770D000052E2FC /* DetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTableViewController.m; sourceTree = "<group>"; };
+		078C010B1677101D0052E2FC /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
 		0795F5E516209D2A0010FFCC /* wruv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wruv.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0795F5E916209D2A0010FFCC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0795F5EB16209D2A0010FFCC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -75,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				078C00FB1676F8960052E2FC /* libMWFeedParser.a in Frameworks */,
 				07CEFAFF1629010D0050B011 /* MediaPlayer.framework in Frameworks */,
 				07CEFB01162902490050B011 /* CoreMedia.framework in Frameworks */,
 				07CEFAF71629001B0050B011 /* AVFoundation.framework in Frameworks */,
@@ -87,9 +115,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		078C00EC1676F7B20052E2FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				078C00F71676F7B20052E2FC /* libMWFeedParser.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		078C010A16770D090052E2FC /* RSS Views */ = {
+			isa = PBXGroup;
+			children = (
+				078C010B1677101D0052E2FC /* RootViewController.xib */,
+				078C010416770D000052E2FC /* RootViewController.h */,
+				078C010516770D000052E2FC /* RootViewController.m */,
+				078C010616770D000052E2FC /* DetailTableViewController.h */,
+				078C010716770D000052E2FC /* DetailTableViewController.m */,
+			);
+			name = "RSS Views";
+			sourceTree = "<group>";
+		};
 		0795F5DA16209D2A0010FFCC = {
 			isa = PBXGroup;
 			children = (
+				078C00EB1676F7B20052E2FC /* MWFeedParser.xcodeproj */,
 				0795F5EF16209D2A0010FFCC /* wruv */,
 				0795F5E816209D2A0010FFCC /* Frameworks */,
 				0795F5E616209D2A0010FFCC /* Products */,
@@ -124,6 +173,7 @@
 				0795F60C16209DE50010FFCC /* ViewDeck */,
 				0795F5F816209D2A0010FFCC /* RUVAppDelegate.h */,
 				0795F5F916209D2A0010FFCC /* RUVAppDelegate.m */,
+				078C010A16770D090052E2FC /* RSS Views */,
 				0795F61B16209F5E0010FFCC /* CenterView */,
 				0795F61A16209F470010FFCC /* LeftView */,
 				0795F6211620A0F10010FFCC /* SettingsView */,
@@ -221,6 +271,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				078C00FA1676F8790052E2FC /* PBXTargetDependency */,
 			);
 			name = wruv;
 			productName = wruv;
@@ -247,12 +298,28 @@
 			mainGroup = 0795F5DA16209D2A0010FFCC;
 			productRefGroup = 0795F5E616209D2A0010FFCC /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 078C00EC1676F7B20052E2FC /* Products */;
+					ProjectRef = 078C00EB1676F7B20052E2FC /* MWFeedParser.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				0795F5E416209D2A0010FFCC /* wruv */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		078C00F71676F7B20052E2FC /* libMWFeedParser.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libMWFeedParser.a;
+			remoteRef = 078C00F61676F7B20052E2FC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		0795F5E316209D2A0010FFCC /* Resources */ = {
@@ -269,6 +336,7 @@
 				0795F6291620BD320010FFCC /* wruv.png in Resources */,
 				07CEFAEE1628E82A0050B011 /* RUVViewController.xib in Resources */,
 				07CEFAF11628E8830050B011 /* addict.jpg in Resources */,
+				078C010C1677101D0052E2FC /* RootViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,10 +355,20 @@
 				0795F61816209F280010FFCC /* RUVLeftViewController.m in Sources */,
 				0795F61F1620A0EA0010FFCC /* RUVSettingsViewController.m in Sources */,
 				0795F6261620A13D0010FFCC /* RUVScheduleViewController.m in Sources */,
+				078C010816770D000052E2FC /* RootViewController.m in Sources */,
+				078C010916770D000052E2FC /* DetailTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		078C00FA1676F8790052E2FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libMWFeedParser;
+			targetProxy = 078C00F91676F8790052E2FC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0795F5F216209D2A0010FFCC /* InfoPlist.strings */ = {
@@ -362,8 +440,17 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "wruv/wruv-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"”$(TARGET_BUILD_DIR)/usr/local/lib/include”",
+					"”$(OBJROOT)/UninstalledProducts/include”",
+				);
 				INFOPLIST_FILE = "wruv/wruv-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/../MWFeedParser-master 2\"/** \"${PROJECT_DIR}/../MWFeedParser-master 2\"/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -377,8 +464,17 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "wruv/wruv-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"”$(TARGET_BUILD_DIR)/usr/local/lib/include”",
+					"”$(OBJROOT)/UninstalledProducts/include”",
+				);
 				INFOPLIST_FILE = "wruv/wruv-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/../MWFeedParser-master 2\"/** \"${PROJECT_DIR}/../MWFeedParser-master 2\"/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

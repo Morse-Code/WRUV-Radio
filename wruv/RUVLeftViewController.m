@@ -7,13 +7,24 @@
 //
 
 #import "RUVLeftViewController.h"
+#import <MWFeedParser/MWFeedParser.h>
+#import "RootViewController.h"
+#import "IIViewDeckController.h"
+
 
 @interface RUVLeftViewController ()
 
 
+@property NSArray *feeds;
+@property NSArray *URLList;
 @end
 
+
 @implementation RUVLeftViewController
+
+
+@synthesize feeds = _feeds;
+@synthesize URLList = _URLList;
 
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -28,6 +39,10 @@
 
 - (void)viewDidLoad
 {
+    _feeds = [NSArray arrayWithObjects:@"Bored?", @"Vermont Cynic", @"UVM Athletics", nil];
+    _URLList = [NSArray arrayWithObjects:@"http://uvmbored.com/feed/",
+                                         @"http://www.vermontcynic.com/se/vermont-cynic-rss-1.1353827",
+                                         @"http://uvmathletics.com/rss.aspx", nil];
     [super viewDidLoad];
 
     // Uncomment the following line to preserve selection between presentations.
@@ -49,7 +64,7 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 0;
+    return 2;
 }
 
 
@@ -57,7 +72,27 @@
  numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 0;
+    if (section == 1) {
+        return [self.feeds count];
+    }
+    else
+    {
+        return 1;
+    }
+}
+
+
+- (NSString *)tableView:(UITableView *)tableView
+titleForHeaderInSection:(NSInteger)section
+{
+    if (section == 1) {
+        return @"UVM News and Events";
+    }
+    else
+    {
+        return @"Playing";
+    }
+
 }
 
 
@@ -69,8 +104,13 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-
-    // Configure the cell...
+    if (indexPath.section == 0) {
+        cell.textLabel.text = @"WRUV Radio";
+    }
+    else
+    {
+        cell.textLabel.text = [self.feeds objectAtIndex:(NSUInteger)indexPath.row];
+    }
 
     return cell;
 }
@@ -119,13 +159,29 @@
 - (void)      tableView:(UITableView *)tableView
 didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+//    self.viewDeckController.leftController = SharedAppDelegate.leftController;
+    if ([[[[tableView cellForRowAtIndexPath:indexPath] textLabel] text] isEqualToString:@"WRUV Radio"]) {
+        self.viewDeckController.centerController = SharedAppDelegate.centerController;
+        self.viewDeckController.leftController = SharedAppDelegate.leftController;
+
+    }
+    else
+    {
+        RootViewController
+                *feedViewController = [[RootViewController alloc] initWithNibName:@"RootViewController" bundle:nil];
+        [feedViewController setFeedString:[self.URLList objectAtIndex:(NSUInteger)indexPath.row]];
+        UINavigationController
+                *navController = [[UINavigationController alloc] initWithRootViewController:feedViewController];
+
+        self.viewDeckController.centerController = navController;
+    }
+
+        [tableView deselectRowAtIndexPath:indexPath animated:YES];
+        [self.viewDeckController closeLeftViewBouncing:^(IIViewDeckController *controller)
+        {
+            [NSThread sleepForTimeInterval:(300 + arc4random() % 700) / 1000000.0]; // mimic delay... not really necessary
+        }];
+
 }
 
 @end

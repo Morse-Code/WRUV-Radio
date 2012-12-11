@@ -1,6 +1,8 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="wruv" type="AppleRunConfiguration" factoryName="Application" SCHEME_NAME="wruv" PROJECT_NAME="wruv" TARGET_NAME="wruv" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" RUN_TARGET_PROJECT_NAME="wruv" RUN_TARGET_NAME="wruv" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
     <envs />
+    <RunnerSettings RunnerId="AppRunner" />
+    <ConfigurationWrapper RunnerId="AppRunner" />
     <method />
   </configuration>
 </component>
