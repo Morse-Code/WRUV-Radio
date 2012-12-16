@@ -7,7 +7,7 @@
           <option name="NAMESPACE_BRACE_PLACEMENT" value="5" />
           <option name="METHOD_BRACE_PLACEMENT" value="2" />
           <option name="FUNCTION_BRACE_PLACEMENT" value="2" />
-          <option name="METHOD_PARAMETERS_WRAP" value="2" />
+          <option name="METHOD_PARAMETERS_WRAP" value="1" />
           <option name="METHOD_PARAMETERS_ALIGN_MULTILINE" value="true" />
           <option name="METHOD_CALL_ARGUMENTS_WRAP" value="1" />
           <option name="METHOD_CALL_ARGUMENTS_ALIGN_MULTILINE" value="true" />
@@ -21,6 +21,7 @@
           <option name="SPACE_BEFORE_PROPERTY_ATTRIBUTES_PARENTHESES" value="true" />
           <option name="SPACE_WITHIN_PROTOCOLS_BRACKETS" value="true" />
           <option name="BLANK_LINES_AROUND_NAMESPACE" value="1" />
+          <option name="INTRODUCE_GENERATE_PROPERTY" value="true" />
           <option name="INTRODUCE_USE_NS_TYPES" value="true" />
         </Objective-C>
         <Objective-C-extensions>
@@ -79,6 +80,7 @@
         </codeStyleSettings>
       </value>
     </option>
+    <option name="USE_PER_PROJECT_SETTINGS" value="true" />
   </component>
 </project>
 

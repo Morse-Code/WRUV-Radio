@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		078C00FB1676F8960052E2FC /* libMWFeedParser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 078C00F71676F7B20052E2FC /* libMWFeedParser.a */; };
-		078C010816770D000052E2FC /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 078C010516770D000052E2FC /* RootViewController.m */; };
-		078C010916770D000052E2FC /* DetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 078C010716770D000052E2FC /* DetailTableViewController.m */; };
-		078C010C1677101D0052E2FC /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 078C010B1677101D0052E2FC /* RootViewController.xib */; };
+		078C010816770D000052E2FC /* RUVRSSListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 078C010516770D000052E2FC /* RUVRSSListViewController.m */; };
+		078C010916770D000052E2FC /* RUVRSSDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 078C010716770D000052E2FC /* RUVRSSDetailViewController.m */; };
+		078C010C1677101D0052E2FC /* RUVLeftTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 078C010B1677101D0052E2FC /* RUVLeftTableView.xib */; };
 		0795F5EA16209D2A0010FFCC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0795F5E916209D2A0010FFCC /* UIKit.framework */; };
 		0795F5EC16209D2A0010FFCC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0795F5EB16209D2A0010FFCC /* Foundation.framework */; };
 		0795F5EE16209D2A0010FFCC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0795F5ED16209D2A0010FFCC /* CoreGraphics.framework */; };
@@ -30,6 +30,8 @@
 		0795F6261620A13D0010FFCC /* RUVScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0795F6241620A13D0010FFCC /* RUVScheduleViewController.m */; };
 		0795F6271620A13D0010FFCC /* RUVScheduleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0795F6251620A13D0010FFCC /* RUVScheduleViewController.xib */; };
 		0795F6291620BD320010FFCC /* wruv.png in Resources */ = {isa = PBXBuildFile; fileRef = 0795F6281620BD320010FFCC /* wruv.png */; };
+		07A6911616779A6B003BAF51 /* RUVWebView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07A6911516779A6B003BAF51 /* RUVWebView.xib */; };
+		07A6911916779C1A003BAF51 /* RUVWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A6911816779C1A003BAF51 /* RUVWebViewController.m */; };
 		07CEFAEE1628E82A0050B011 /* RUVViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07CEFAEC1628E82A0050B011 /* RUVViewController.xib */; };
 		07CEFAF11628E8830050B011 /* addict.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 07CEFAF01628E8830050B011 /* addict.jpg */; };
 		07CEFAF71629001B0050B011 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CEFAF61629001B0050B011 /* AVFoundation.framework */; };
@@ -56,11 +58,11 @@
 
 /* Begin PBXFileReference section */
 		078C00EB1676F7B20052E2FC /* MWFeedParser.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MWFeedParser.xcodeproj; path = "../MWFeedParser-master 2/MWFeedParser.xcodeproj"; sourceTree = "<group>"; };
-		078C010416770D000052E2FC /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		078C010516770D000052E2FC /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		078C010616770D000052E2FC /* DetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTableViewController.h; sourceTree = "<group>"; };
-		078C010716770D000052E2FC /* DetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTableViewController.m; sourceTree = "<group>"; };
-		078C010B1677101D0052E2FC /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
+		078C010416770D000052E2FC /* RUVRSSListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RUVRSSListViewController.h; sourceTree = "<group>"; };
+		078C010516770D000052E2FC /* RUVRSSListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUVRSSListViewController.m; sourceTree = "<group>"; };
+		078C010616770D000052E2FC /* RUVRSSDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RUVRSSDetailViewController.h; sourceTree = "<group>"; };
+		078C010716770D000052E2FC /* RUVRSSDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUVRSSDetailViewController.m; sourceTree = "<group>"; };
+		078C010B1677101D0052E2FC /* RUVLeftTableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RUVLeftTableView.xib; sourceTree = "<group>"; };
 		0795F5E516209D2A0010FFCC /* wruv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wruv.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0795F5E916209D2A0010FFCC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0795F5EB16209D2A0010FFCC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -90,6 +92,9 @@
 		0795F6241620A13D0010FFCC /* RUVScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUVScheduleViewController.m; sourceTree = "<group>"; };
 		0795F6251620A13D0010FFCC /* RUVScheduleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RUVScheduleViewController.xib; sourceTree = "<group>"; };
 		0795F6281620BD320010FFCC /* wruv.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wruv.png; sourceTree = "<group>"; };
+		07A6911516779A6B003BAF51 /* RUVWebView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RUVWebView.xib; sourceTree = "<group>"; };
+		07A6911716779C1A003BAF51 /* RUVWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RUVWebViewController.h; sourceTree = "<group>"; };
+		07A6911816779C1A003BAF51 /* RUVWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUVWebViewController.m; sourceTree = "<group>"; };
 		07CEFAEC1628E82A0050B011 /* RUVViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RUVViewController.xib; sourceTree = "<group>"; };
 		07CEFAF01628E8830050B011 /* addict.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = addict.jpg; sourceTree = "<group>"; };
 		07CEFAF61629001B0050B011 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -126,11 +131,14 @@
 		078C010A16770D090052E2FC /* RSS Views */ = {
 			isa = PBXGroup;
 			children = (
-				078C010B1677101D0052E2FC /* RootViewController.xib */,
-				078C010416770D000052E2FC /* RootViewController.h */,
-				078C010516770D000052E2FC /* RootViewController.m */,
-				078C010616770D000052E2FC /* DetailTableViewController.h */,
-				078C010716770D000052E2FC /* DetailTableViewController.m */,
+				078C010B1677101D0052E2FC /* RUVLeftTableView.xib */,
+				078C010416770D000052E2FC /* RUVRSSListViewController.h */,
+				078C010516770D000052E2FC /* RUVRSSListViewController.m */,
+				078C010616770D000052E2FC /* RUVRSSDetailViewController.h */,
+				07A6911716779C1A003BAF51 /* RUVWebViewController.h */,
+				07A6911816779C1A003BAF51 /* RUVWebViewController.m */,
+				078C010716770D000052E2FC /* RUVRSSDetailViewController.m */,
+				07A6911516779A6B003BAF51 /* RUVWebView.xib */,
 			);
 			name = "RSS Views";
 			sourceTree = "<group>";
@@ -336,7 +344,8 @@
 				0795F6291620BD320010FFCC /* wruv.png in Resources */,
 				07CEFAEE1628E82A0050B011 /* RUVViewController.xib in Resources */,
 				07CEFAF11628E8830050B011 /* addict.jpg in Resources */,
-				078C010C1677101D0052E2FC /* RootViewController.xib in Resources */,
+				078C010C1677101D0052E2FC /* RUVLeftTableView.xib in Resources */,
+				07A6911616779A6B003BAF51 /* RUVWebView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,8 +364,9 @@
 				0795F61816209F280010FFCC /* RUVLeftViewController.m in Sources */,
 				0795F61F1620A0EA0010FFCC /* RUVSettingsViewController.m in Sources */,
 				0795F6261620A13D0010FFCC /* RUVScheduleViewController.m in Sources */,
-				078C010816770D000052E2FC /* RootViewController.m in Sources */,
-				078C010916770D000052E2FC /* DetailTableViewController.m in Sources */,
+				078C010816770D000052E2FC /* RUVRSSListViewController.m in Sources */,
+				078C010916770D000052E2FC /* RUVRSSDetailViewController.m in Sources */,
+				07A6911916779C1A003BAF51 /* RUVWebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +444,7 @@
 		0795F60A16209D2A0010FFCC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -450,7 +461,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/../MWFeedParser-master 2\"/** \"${PROJECT_DIR}/../MWFeedParser-master 2\"/**";
+				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -458,6 +469,7 @@
 		0795F60B16209D2A0010FFCC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -474,7 +486,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/../MWFeedParser-master 2\"/** \"${PROJECT_DIR}/../MWFeedParser-master 2\"/**";
+				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
