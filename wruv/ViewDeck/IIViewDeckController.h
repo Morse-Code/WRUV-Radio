@@ -27,7 +27,8 @@
 
 @protocol IIViewDeckControllerDelegate;
 
-typedef enum {
+typedef enum
+{
     IIViewDeckNoPanning,              // no panning allowed
     IIViewDeckFullViewPanning,        // the default: touch anywhere in the center view to drag the center view around
     IIViewDeckNavigationBarPanning,   // panning only occurs when you start touching in the navigation bar (when the center controller is a UINavigationController with a visible navigation bar). Otherwise it will behave as IIViewDeckNoPanning. 
@@ -35,7 +36,8 @@ typedef enum {
 } IIViewDeckPanningMode;
 
 
-typedef enum {
+typedef enum
+{
     IIViewDeckCenterHiddenUserInteractive,         // the center view stays interactive
     IIViewDeckCenterHiddenNotUserInteractive,      // the center view will become nonresponsive to useractions
     IIViewDeckCenterHiddenNotUserInteractiveWithTapToClose, // the center view will become nonresponsive to useractions, but will allow the user to tap it so that it closes
@@ -43,13 +45,15 @@ typedef enum {
 } IIViewDeckCenterHiddenInteractivity;
 
 
-typedef enum {
+typedef enum
+{
     IIViewDeckNavigationControllerContained,      // the center navigation controller will act as any other viewcontroller. Pushing and popping view controllers will be contained in the centerview.
     IIViewDeckNavigationControllerIntegrated      // the center navigation controller will integrate with the viewdeck.
 } IIViewDeckNavigationControllerBehavior;
 
 
-typedef enum {
+typedef enum
+{
     IIViewDeckRotationKeepsLedgeSizes, // when rotating, the ledge sizes are kept (side views are more/less visible)
     IIViewDeckRotationKeepsViewSizes  // when rotating, the size view sizes are kept (ledges change)
 } IIViewDeckRotationBehavior;
@@ -59,23 +63,25 @@ typedef enum {
 #define IIViewDeckCenterHiddenIsInteractive(interactivity) ((interactivity) == IIViewDeckCenterHiddenUserInteractive)
 
 
-@interface IIViewDeckController : UIViewController {
-@private    
+@interface IIViewDeckController : UIViewController
+{
+@private
     CGFloat _panOrigin;
     BOOL _viewAppeared;
     CGFloat _preRotationWidth, _leftWidth, _rightWidth, _preRotationCenterWidth, _maxLedge, _offset;
 }
 
-typedef void (^IIViewDeckControllerBlock) (IIViewDeckController *controller);
 
-@property (nonatomic, assign) id<IIViewDeckControllerDelegate> delegate;
-@property (nonatomic, retain) UIViewController* centerController;
-@property (nonatomic, retain) UIViewController* leftController;
-@property (nonatomic, retain) UIViewController* rightController;
-@property (nonatomic, readonly, assign) UIViewController* slidingController;
-@property (nonatomic, retain) UIView* panningView; 
-@property (nonatomic, assign) id<UIGestureRecognizerDelegate> panningGestureDelegate;
-@property (nonatomic, readonly, retain) NSArray* controllers;
+typedef void (^IIViewDeckControllerBlock)(IIViewDeckController *controller);
+
+@property (nonatomic, assign) id < IIViewDeckControllerDelegate > delegate;
+@property (nonatomic, retain) UIViewController *centerController;
+@property (nonatomic, retain) UIViewController *leftController;
+@property (nonatomic, retain) UIViewController *rightController;
+@property (nonatomic, readonly, assign) UIViewController *slidingController;
+@property (nonatomic, retain) UIView *panningView;
+@property (nonatomic, assign) id < UIGestureRecognizerDelegate > panningGestureDelegate;
+@property (nonatomic, readonly, retain) NSArray *controllers;
 @property (nonatomic, getter=isEnabled) BOOL enabled;
 @property (nonatomic) BOOL elastic;
 
@@ -89,51 +95,89 @@ typedef void (^IIViewDeckControllerBlock) (IIViewDeckController *controller);
 @property (nonatomic) IIViewDeckRotationBehavior rotationBehavior;
 @property (nonatomic) BOOL automaticallyUpdateTabBarItems;
 
-- (id)initWithCenterViewController:(UIViewController*)centerController;
-- (id)initWithCenterViewController:(UIViewController*)centerController leftViewController:(UIViewController*)leftController;
-- (id)initWithCenterViewController:(UIViewController*)centerController rightViewController:(UIViewController*)rightController;
-- (id)initWithCenterViewController:(UIViewController*)centerController leftViewController:(UIViewController*)leftController rightViewController:(UIViewController*)rightController;
+- (id)initWithCenterViewController:(UIViewController *)centerController;
+
+- (id)initWithCenterViewController:(UIViewController *)centerController
+                leftViewController:(UIViewController *)leftController;
+
+- (id)initWithCenterViewController:(UIViewController *)centerController
+               rightViewController:(UIViewController *)rightController;
+
+- (id)initWithCenterViewController:(UIViewController *)centerController
+                leftViewController:(UIViewController *)leftController
+               rightViewController:(UIViewController *)rightController;
 
 - (void)showCenterView;
+
 - (void)showCenterView:(BOOL)animated;
+
 - (void)showCenterView:(BOOL)animated completion:(IIViewDeckControllerBlock)completed;
 
 
-- (void)setLeftLedge:(CGFloat)rightLedge completion:(void(^)(BOOL finished))completion;
-- (void)setRightLedge:(CGFloat)rightLedge completion:(void(^)(BOOL finished))completion;
+- (void)setLeftLedge:(CGFloat)rightLedge completion:(void (^)(BOOL finished))completion;
+
+- (void)setRightLedge:(CGFloat)rightLedge completion:(void (^)(BOOL finished))completion;
 
 - (BOOL)toggleLeftView;
+
 - (BOOL)openLeftView;
+
 - (BOOL)closeLeftView;
+
 - (BOOL)toggleLeftViewAnimated:(BOOL)animated;
+
 - (BOOL)toggleLeftViewAnimated:(BOOL)animated completion:(IIViewDeckControllerBlock)completed;
+
 - (BOOL)openLeftViewAnimated:(BOOL)animated;
+
 - (BOOL)openLeftViewAnimated:(BOOL)animated completion:(IIViewDeckControllerBlock)completed;
+
 - (BOOL)openLeftViewBouncing:(IIViewDeckControllerBlock)bounced;
+
 - (BOOL)openLeftViewBouncing:(IIViewDeckControllerBlock)bounced completion:(IIViewDeckControllerBlock)completed;
+
 - (BOOL)closeLeftViewAnimated:(BOOL)animated;
-- (BOOL)closeLeftViewAnimated:(BOOL)animated completion:(void(^)(IIViewDeckController* controller))completed;
+
+- (BOOL)closeLeftViewAnimated:(BOOL)animated completion:(void (^)(IIViewDeckController *controller))completed;
+
 - (BOOL)closeLeftViewBouncing:(IIViewDeckControllerBlock)bounced;
+
 - (BOOL)closeLeftViewBouncing:(IIViewDeckControllerBlock)bounced completion:(IIViewDeckControllerBlock)completed;
 
 - (BOOL)toggleRightView;
+
 - (BOOL)openRightView;
+
 - (BOOL)closeRightView;
+
 - (BOOL)toggleRightViewAnimated:(BOOL)animated;
+
 - (BOOL)toggleRightViewAnimated:(BOOL)animated completion:(IIViewDeckControllerBlock)completed;
+
 - (BOOL)openRightViewAnimated:(BOOL)animated;
+
 - (BOOL)openRightViewAnimated:(BOOL)animated completion:(IIViewDeckControllerBlock)completed;
+
 - (BOOL)openRightViewBouncing:(IIViewDeckControllerBlock)bounced;
+
 - (BOOL)openRightViewBouncing:(IIViewDeckControllerBlock)bounced completion:(IIViewDeckControllerBlock)completed;
+
 - (BOOL)closeRightViewAnimated:(BOOL)animated;
+
 - (BOOL)closeRightViewAnimated:(BOOL)animated completion:(IIViewDeckControllerBlock)completed;
+
 - (BOOL)closeRightViewBouncing:(IIViewDeckControllerBlock)bounced;
+
 - (BOOL)closeRightViewBouncing:(IIViewDeckControllerBlock)bounced completion:(IIViewDeckControllerBlock)completed;
-- (void)rightViewPushViewControllerOverCenterController:(UIViewController*)controller;
+
+- (void)rightViewPushViewControllerOverCenterController:(UIViewController *)controller;
 
 - (BOOL)leftControllerIsClosed;
+
 - (BOOL)leftControllerIsOpen;
+
 - (BOOL)rightControllerIsClosed;
+
 - (BOOL)rightControllerIsOpen;
 
 - (CGFloat)statusBarHeight;
@@ -143,31 +187,46 @@ typedef void (^IIViewDeckControllerBlock) (IIViewDeckController *controller);
 
 // Delegate protocol
 
-@protocol IIViewDeckControllerDelegate <NSObject>
+@protocol IIViewDeckControllerDelegate < NSObject >
+
 
 @optional
-- (void)viewDeckController:(IIViewDeckController*)viewDeckController applyShadow:(CALayer*)shadowLayer withBounds:(CGRect)rect;
+- (void)viewDeckController:(IIViewDeckController *)viewDeckController applyShadow:(CALayer *)shadowLayer
+                withBounds:(CGRect)rect;
 
-- (void)viewDeckController:(IIViewDeckController*)viewDeckController didPanToOffset:(CGFloat)offset;
-- (void)viewDeckController:(IIViewDeckController*)viewDeckController slideOffsetChanged:(CGFloat)offset;
-- (void)viewDeckController:(IIViewDeckController *)viewDeckController didBounceWithClosingController:(UIViewController*)openController;
-- (BOOL)viewDeckControllerWillOpenLeftView:(IIViewDeckController*)viewDeckController animated:(BOOL)animated;
-- (void)viewDeckControllerDidOpenLeftView:(IIViewDeckController*)viewDeckController animated:(BOOL)animated;
-- (BOOL)viewDeckControllerWillCloseLeftView:(IIViewDeckController*)viewDeckController animated:(BOOL)animated;
-- (void)viewDeckControllerDidCloseLeftView:(IIViewDeckController*)viewDeckController animated:(BOOL)animated;
-- (BOOL)viewDeckControllerWillOpenRightView:(IIViewDeckController*)viewDeckController animated:(BOOL)animated;
-- (void)viewDeckControllerDidOpenRightView:(IIViewDeckController*)viewDeckController animated:(BOOL)animated;
-- (BOOL)viewDeckControllerWillCloseRightView:(IIViewDeckController*)viewDeckController animated:(BOOL)animated;
-- (void)viewDeckControllerDidCloseRightView:(IIViewDeckController*)viewDeckController animated:(BOOL)animated;
-- (void)viewDeckControllerDidShowCenterView:(IIViewDeckController*)viewDeckController animated:(BOOL)animated;
+- (void)viewDeckController:(IIViewDeckController *)viewDeckController didPanToOffset:(CGFloat)offset;
+
+- (void)viewDeckController:(IIViewDeckController *)viewDeckController slideOffsetChanged:(CGFloat)offset;
+
+- (void)    viewDeckController:(IIViewDeckController *)viewDeckController
+didBounceWithClosingController:(UIViewController *)openController;
+
+- (BOOL)viewDeckControllerWillOpenLeftView:(IIViewDeckController *)viewDeckController animated:(BOOL)animated;
+
+- (void)viewDeckControllerDidOpenLeftView:(IIViewDeckController *)viewDeckController animated:(BOOL)animated;
+
+- (BOOL)viewDeckControllerWillCloseLeftView:(IIViewDeckController *)viewDeckController animated:(BOOL)animated;
+
+- (void)viewDeckControllerDidCloseLeftView:(IIViewDeckController *)viewDeckController animated:(BOOL)animated;
+
+- (BOOL)viewDeckControllerWillOpenRightView:(IIViewDeckController *)viewDeckController animated:(BOOL)animated;
+
+- (void)viewDeckControllerDidOpenRightView:(IIViewDeckController *)viewDeckController animated:(BOOL)animated;
+
+- (BOOL)viewDeckControllerWillCloseRightView:(IIViewDeckController *)viewDeckController animated:(BOOL)animated;
+
+- (void)viewDeckControllerDidCloseRightView:(IIViewDeckController *)viewDeckController animated:(BOOL)animated;
+
+- (void)viewDeckControllerDidShowCenterView:(IIViewDeckController *)viewDeckController animated:(BOOL)animated;
 
 @end
 
 
 // category on UIViewController to provide access to the viewDeckController in the 
 // contained viewcontrollers, a la UINavigationController.
-@interface UIViewController (UIViewDeckItem) 
+@interface UIViewController (UIViewDeckItem)
 
-@property(nonatomic,readonly,retain) IIViewDeckController *viewDeckController; 
+
+@property (nonatomic, readonly, retain) IIViewDeckController *viewDeckController;
 
 @end

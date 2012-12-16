@@ -44,9 +44,9 @@
 
 #import "WrapController.h"
 #import <objc/runtime.h>
-#import <objc/message.h>
 
-@interface UIViewController (WrappedItem_Internal) 
+@interface UIViewController (WrappedItem_Internal)
+
 
 // internal setter for the wrapController property on UIViewController
 - (void)setWrapController:(WrapController *)wrapController;
@@ -54,6 +54,7 @@
 @end
 
 @implementation WrapController
+
 
 @synthesize wrappedController = _wrappedController;
 @synthesize onViewDidLoad = _onViewDidLoad;
@@ -64,46 +65,57 @@
 
 #pragma mark - View lifecycle
 
-- (id)initWithViewController:(UIViewController *)controller {
+- (id)initWithViewController:(UIViewController *)controller
+{
     if ((self = [super init])) {
         II_RETAIN(controller);
         _wrappedController = controller;
         [controller setWrapController:self];
     }
-          
+
     return self;
 }
 
-- (CGFloat)statusBarHeight {
+
+- (CGFloat)statusBarHeight
+{
 //    if (![[self.referenceView superview] isKindOfClass:[UIWindow class]]) 
 //        return 0;
 //    
-    return UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation) 
-    ? [UIApplication sharedApplication].statusBarFrame.size.width 
-    : [UIApplication sharedApplication].statusBarFrame.size.height;
+    return UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation)
+                    ? [UIApplication sharedApplication].statusBarFrame.size.width
+                    : [UIApplication sharedApplication].statusBarFrame.size.height;
 }
+
 
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
 - (void)loadView
 {
 #if __IPHONE_5_0
-    if ([self respondsToSelector:@selector(addChildViewController:)])
+    if ([self respondsToSelector:@selector(addChildViewController:)]) {
         [self addChildViewController:self.wrappedController];
+    }
 #endif
-    
-    self.view = II_AUTORELEASE([[UIView alloc] initWithFrame:II_CGRectOffsetTopAndShrink(self.wrappedController.view.frame, [self statusBarHeight])]);
+
+    self.view = II_AUTORELEASE([[UIView alloc]
+                                        initWithFrame:II_CGRectOffsetTopAndShrink(self.wrappedController.view.frame,
+                                                                                  [self statusBarHeight])]);
     self.view.autoresizingMask = self.wrappedController.view.autoresizingMask;
     self.wrappedController.view.frame = self.view.bounds;
     self.wrappedController.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     [self.view addSubview:self.wrappedController.view];
 }
 
-- (void)viewDidLoad {
+
+- (void)viewDidLoad
+{
     [super viewDidLoad];
 
-    if (self.onViewDidLoad) 
+    if (self.onViewDidLoad) {
         self.onViewDidLoad(self);
+    }
 }
+
 
 - (void)viewDidUnload
 {
@@ -111,7 +123,9 @@
     [self.wrappedController.view removeFromSuperview];
 }
 
-- (void)dealloc {
+
+- (void)dealloc
+{
 #if __IPHONE_5_0
     if ([_wrappedController respondsToSelector:@selector(removeFromParentViewController)]) {
         [_wrappedController removeFromParentViewController];
@@ -125,141 +139,194 @@
 #endif
 }
 
-- (BOOL)automaticallyForwardAppearanceAndRotationMethodsToChildViewControllers {
+
+- (BOOL)automaticallyForwardAppearanceAndRotationMethodsToChildViewControllers
+{
     return NO;
 }
 
-- (UITabBarItem *)tabBarItem {
+
+- (UITabBarItem *)tabBarItem
+{
     return _wrappedController.tabBarItem;
 }
 
--(void)setTabBarItem:(UITabBarItem *)tabBarItem {
+
+- (void)setTabBarItem:(UITabBarItem *)tabBarItem
+{
     [_wrappedController setTabBarItem:tabBarItem];
 }
 
-- (BOOL)hidesBottomBarWhenPushed {
+
+- (BOOL)hidesBottomBarWhenPushed
+{
     return _wrappedController.hidesBottomBarWhenPushed;
 }
 
-- (void)setHidesBottomBarWhenPushed:(BOOL)hidesBottomBarWhenPushed {
+
+- (void)setHidesBottomBarWhenPushed:(BOOL)hidesBottomBarWhenPushed
+{
     [_wrappedController setHidesBottomBarWhenPushed:hidesBottomBarWhenPushed];
 }
+
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    if (self.onViewWillAppear) 
+    if (self.onViewWillAppear) {
         self.onViewWillAppear(self, animated);
+    }
 
     [self.wrappedController viewWillAppear:animated];
 }
 
+
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    if (self.onViewDidAppear) 
+    if (self.onViewDidAppear) {
         self.onViewDidAppear(self, animated);
+    }
 
     [self.wrappedController viewDidAppear:animated];
 }
 
+
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    if (self.onViewWillDisappear) 
+    if (self.onViewWillDisappear) {
         self.onViewWillDisappear(self, animated);
+    }
 
     [self.wrappedController viewWillDisappear:animated];
 }
 
+
 - (void)viewDidDisappear:(BOOL)animated
 {
     [super viewDidDisappear:animated];
-    if (self.onViewDidDisappear) 
+    if (self.onViewDidDisappear) {
         self.onViewDidDisappear(self, animated);
+    }
 
     [self.wrappedController viewDidDisappear:animated];
 }
+
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return [self.wrappedController shouldAutorotateToInterfaceOrientation:interfaceOrientation];
 }
 
-- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+                                         duration:(NSTimeInterval)duration
+{
     [super willAnimateRotationToInterfaceOrientation:toInterfaceOrientation duration:duration];
     [self.wrappedController willAnimateRotationToInterfaceOrientation:toInterfaceOrientation duration:duration];
 }
 
-- (void)willAnimateFirstHalfOfRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+
+- (void)willAnimateFirstHalfOfRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+                                                    duration:(NSTimeInterval)duration
+{
     [super willAnimateFirstHalfOfRotationToInterfaceOrientation:toInterfaceOrientation duration:duration];
-    [self.wrappedController willAnimateFirstHalfOfRotationToInterfaceOrientation:toInterfaceOrientation duration:duration];
+    [self.wrappedController willAnimateFirstHalfOfRotationToInterfaceOrientation:toInterfaceOrientation
+                                                                        duration:duration];
 }
 
-- (void)willAnimateSecondHalfOfRotationFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation duration:(NSTimeInterval)duration {
+
+- (void)willAnimateSecondHalfOfRotationFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+                                                       duration:(NSTimeInterval)duration
+{
     [super willAnimateSecondHalfOfRotationFromInterfaceOrientation:fromInterfaceOrientation duration:duration];
-    [self.wrappedController willAnimateSecondHalfOfRotationFromInterfaceOrientation:fromInterfaceOrientation duration:duration];
+    [self.wrappedController willAnimateSecondHalfOfRotationFromInterfaceOrientation:fromInterfaceOrientation
+                                                                           duration:duration];
 }
 
-- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+                                duration:(NSTimeInterval)duration
+{
     [super willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
     [self.wrappedController willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
 }
 
-- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
+
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+{
     [super didRotateFromInterfaceOrientation:fromInterfaceOrientation];
     [self.wrappedController didRotateFromInterfaceOrientation:fromInterfaceOrientation];
 }
 
-- (void)didReceiveMemoryWarning {
+
+- (void)didReceiveMemoryWarning
+{
     [self.wrappedController didReceiveMemoryWarning];
 }
 
 @end
 
-@implementation UIViewController (WrapControllerItem) 
+@implementation UIViewController (WrapControllerItem)
+
 
 @dynamic wrapController;
 
-static const char* wrapControllerKey = "WrapController";
+static const char *wrapControllerKey = "WrapController";
 
-- (WrapController*)wrapController_core {
+
+- (WrapController *)wrapController_core
+{
     return objc_getAssociatedObject(self, wrapControllerKey);
 }
 
-- (WrapController*)wrapController {
+
+- (WrapController *)wrapController
+{
     id result = [self wrapController_core];
-    if (!result && self.navigationController) 
+    if (!result && self.navigationController) {
         return [self.navigationController wrapController];
-    
+    }
+
     return result;
 }
 
-- (void)setWrapController:(WrapController *)wrapController {
+
+- (void)setWrapController:(WrapController *)wrapController
+{
     objc_setAssociatedObject(self, wrapControllerKey, wrapController, OBJC_ASSOCIATION_ASSIGN);
 }
 
-- (UINavigationController*)wc_navigationController {
-    UIViewController* controller = self.wrapController_core ? self.wrapController_core : self;
+
+- (UINavigationController *)wc_navigationController
+{
+    UIViewController *controller = self.wrapController_core ? self.wrapController_core : self;
     return [controller wc_navigationController]; // when we get here, the wc_ method is actually the old, real method
 }
 
-- (UINavigationItem*)wc_navigationItem {
-    UIViewController* controller = self.wrapController_core ? self.wrapController_core : self;
+
+- (UINavigationItem *)wc_navigationItem
+{
+    UIViewController *controller = self.wrapController_core ? self.wrapController_core : self;
     return [controller wc_navigationItem]; // when we get here, the wc_ method is actually the old, real method
 }
 
-+ (void)wc_swizzle {
+
++ (void)wc_swizzle
+{
     SEL nc = @selector(navigationController);
     SEL wcnc = @selector(wc_navigationController);
     method_exchangeImplementations(class_getInstanceMethod(self, nc), class_getInstanceMethod(self, wcnc));
-    
+
     SEL ni = @selector(navigationItem);
     SEL wcni = @selector(wc_navigationItem);
     method_exchangeImplementations(class_getInstanceMethod(self, ni), class_getInstanceMethod(self, wcni));
 }
 
-+ (void)load {
+
++ (void)load
+{
     [super load];
     [self wc_swizzle];
 }
