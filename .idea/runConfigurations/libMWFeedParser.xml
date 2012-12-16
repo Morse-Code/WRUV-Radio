@@ -1,0 +1,6 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="libMWFeedParser" type="AppleRunConfiguration" factoryName="Application" SCHEME_NAME="libMWFeedParser" PROJECT_NAME="MWFeedParser" TARGET_NAME="libMWFeedParser" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" MAKE_ACTIVE="FALSE" WAIT_FOR="FALSE">
+    <envs />
+    <method />
+  </configuration>
+</component>

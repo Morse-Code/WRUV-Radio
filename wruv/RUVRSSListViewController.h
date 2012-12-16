@@ -1,5 +1,5 @@
 //
-//  DetailTableViewController.h
+//  RUVRSSListViewController.h
 //  MWFeedParser
 //
 //  Copyright (c) 2010 Michael Waterfall
@@ -28,15 +28,26 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MWFeedParser/MWFeedParser.h>
+//#import "MWFeedParser.h"
 
-@class MWFeedItem;
+@interface RUVRSSListViewController : UITableViewController < MWFeedParserDelegate >
+{
 
-@interface DetailTableViewController : UITableViewController {
-	MWFeedItem *item;
-	NSString *dateString, *summaryString;
+    // Parsing
+
+    MWFeedParser *feedParser;
+    NSMutableArray *parsedItems;
+
+    // Displaying
+    NSArray *itemsToDisplay;
+    NSDateFormatter *formatter;
+
 }
 
-@property (nonatomic, retain) MWFeedItem *item;
-@property (nonatomic, retain) NSString *dateString, *summaryString;
+
+// Properties
+@property (nonatomic, retain) NSArray *itemsToDisplay;
+@property (nonatomic, retain) NSString *feedString;
 
 @end
