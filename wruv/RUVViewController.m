@@ -37,14 +37,13 @@
     [airplay addSubview:volumeView];
     [volumeView setShowsVolumeSlider:YES];
     [volumeView setShowsRouteButton:YES];
-
-    //    [self.menuButton setTitle:@"Back"];
-    //    [self.menuButton setTarget:self.viewDeckController];
-    //    [self.menuButton setAction:@selector(toggleLeftView)];
+    [NSThread detachNewThreadSelector:@selector(downloadAndLoadImage)
+    toTarget:self
+    withObject:nil];
 
     [self setTitle:@"WRUV-Radio"];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]
-                                                              initWithTitle:@"left" style:UIBarButtonItemStyleBordered
+                                                              initWithTitle:@"List" style:UIBarButtonItemStyleBordered
                                                                      target:self.viewDeckController
                                                                      action:@selector(toggleLeftView)];
     [self.navigationController.navigationBar setBarStyle:UIBarStyleBlack];
@@ -111,6 +110,10 @@ static Float64 secondsWithCMTimeOrZeroIfInvalid(CMTime time)
 
 - (void)updateMetadata
 {
+
+/*    NSMutableCharacterSet *characterSet = [NSMutableCharacterSet newlineCharacterSet];
+    [characterSet addCharactersInString:@","];*/
+
     for (AVAssetTrack *track in player.currentItem.tracks) {
         for (AVPlayerItemTrack *item in player.currentItem.tracks) {
             if ([item.assetTrack.mediaType isEqual:AVMediaTypeAudio]) {
@@ -119,9 +122,21 @@ static Float64 secondsWithCMTimeOrZeroIfInvalid(CMTime time)
                     if (nowplaying.hidden == YES) {
                         nowplaying.hidden = NO;
                     }
+                    NSLog(@"%@", metaItem.stringValue);
                     NSString *source = metaItem.stringValue;
-                    //NSLog(@"meta %@",source);
-                    metadatas.text = source;
+                    NSString *comma = @",";
+                    NSString *openQuote = @"\"";
+                    NSString *closeParentheses = @")";
+                    NSScanner *aScanner = [NSScanner scannerWithString:source];
+                    NSString *showName;
+                    NSString *trackTitle;
+                    [aScanner scanUpToString:comma intoString:&showName];
+                    [aScanner scanUpToString:openQuote intoString:NULL];
+                    [aScanner scanUpToString:closeParentheses intoString:&trackTitle];
+                    NSLog(@"track title: %@ \nshow Name: %@", trackTitle, showName);
+//                    metadatas.text = trackTitle;
+                    metadatas.text = @"Track Title";
+                    nowplaying.text = showName;
                 }
             }
         }
@@ -155,8 +170,7 @@ static Float64 secondsWithCMTimeOrZeroIfInvalid(CMTime time)
 
 - (void)playpause
 {
-    if ([self isPlaying])
-    {
+    if ([self isPlaying]) {
         [self showPauseButton];
     }
     else
@@ -229,6 +243,17 @@ static Float64 secondsWithCMTimeOrZeroIfInvalid(CMTime time)
         default:
             break;
     }
+}
+
+
+- (void)downloadAndLoadImage
+{
+    NSURL *url = [NSURL URLWithString:@"http://d1i6vahw24eb07.cloudfront.net/s22632q.png"];
+
+    NSData *data = [[NSData alloc] initWithContentsOfURL:url];
+
+    UIImage *tmpImage = [[UIImage alloc] initWithData:data];
+    [self.stationArt setImage:tmpImage];
 }
 
 
