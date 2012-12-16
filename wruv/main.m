@@ -6,8 +6,6 @@
 //  Copyright (c) 2012 Christopher Morse. All rights reserved.
 //
 
-#import "RUVAppDelegate.h"
-
 int main(int argc, char *argv[])
 {
     @autoreleasepool {

@@ -10,7 +10,13 @@
 #import <MWFeedParser/MWFeedParser.h>
 
 
-@interface RUVLeftViewController : UITableViewController 
+@interface RUVLeftViewController : UITableViewController
+{
+    NSArray *_radioSection;
+}
+
+
+@property (nonatomic, strong) NSArray *radioSection;
 
 
 @end
