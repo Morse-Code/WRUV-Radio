@@ -2,39 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe3005b3-1e09-4a99-86d0-b64c3bb0a12d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/runConfigurations/libMWFeedParser.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wruv.xcworkspace/contents.xcworkspacedata" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wruv/RUVLeftTableView.xib" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wruv/RUVRSSDetailViewController.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wruv/RUVRSSListViewController.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wruv/RUVWebView.xib" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wruv/RUVWebViewController.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wruv/RUVWebViewController.m" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/runConfigurations/TouchRssArcFree.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wruv.xcodeproj/xcshareddata/xcschemes/TouchRssArcFree.xcscheme" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wruv/DetailTableViewController.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wruv/RootViewController.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wruv/RootViewController.xib" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/wruv/DetailTableViewController.h" afterPath="$PROJECT_DIR$/wruv/RUVRSSDetailViewController.h" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/wruv/RootViewController.h" afterPath="$PROJECT_DIR$/wruv/RUVRSSListViewController.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wruv.xcodeproj/project.xcworkspace/xcuserdata/morsecp.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/wruv.xcodeproj/project.xcworkspace/xcuserdata/morsecp.xcuserdatad/UserInterfaceState.xcuserstate" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/xcode.xml" afterPath="$PROJECT_DIR$/.idea/xcode.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wruv.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/wruv.xcodeproj/project.pbxproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wruv/RUVAppDelegate.m" afterPath="$PROJECT_DIR$/wruv/RUVAppDelegate.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wruv/RUVLeftViewController.h" afterPath="$PROJECT_DIR$/wruv/RUVLeftViewController.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wruv/RUVLeftViewController.m" afterPath="$PROJECT_DIR$/wruv/RUVLeftViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wruv/RUVViewController.m" afterPath="$PROJECT_DIR$/wruv/RUVViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wruv/RUVViewController.xib" afterPath="$PROJECT_DIR$/wruv/RUVViewController.xib" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wruv/ViewDeck/IIViewDeckController.h" afterPath="$PROJECT_DIR$/wruv/ViewDeck/IIViewDeckController.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wruv/ViewDeck/IIViewDeckController.m" afterPath="$PROJECT_DIR$/wruv/ViewDeck/IIViewDeckController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wruv/ViewDeck/WrapController.h" afterPath="$PROJECT_DIR$/wruv/ViewDeck/WrapController.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wruv/ViewDeck/WrapController.m" afterPath="$PROJECT_DIR$/wruv/ViewDeck/WrapController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wruv/main.m" afterPath="$PROJECT_DIR$/wruv/main.m" />
     </list>
     <ignored path="wruv.iws" />
     <ignored path=".idea/workspace.xml" />
+    <file path="/Dummy.txt" changelist="fe3005b3-1e09-4a99-86d0-b64c3bb0a12d" time="1355679414771" ignored="false" />
+    <file path="/a.mm" changelist="fe3005b3-1e09-4a99-86d0-b64c3bb0a12d" time="1355679328809" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,153 +24,28 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_UNIVERSAL" />
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5188172">
-      <split-first>
-        <leaf>
-          <file leaf-file-name="RUVRSSDetailViewController.h" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/wruv/RUVRSSDetailViewController.h">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="4" column="0" selection-start="56" selection-end="56" vertical-scroll-proportion="0.0">
-                  <folding>
-                    <element signature="n#!!doc" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="RUVRSSDetailViewController.m" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/wruv/RUVRSSDetailViewController.m">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="4" column="0" selection-start="56" selection-end="56" vertical-scroll-proportion="0.0">
-                  <folding>
-                    <element signature="n#!!doc" expanded="true" />
-                    <element signature="e#58#93#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="RUVRSSListViewController.h" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/wruv/RUVRSSListViewController.h">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="8" column="0" selection-start="118" selection-end="118" vertical-scroll-proportion="0.0">
-                  <folding>
-                    <element signature="n#!!doc" expanded="true" />
-                    <element signature="e#56#79#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="RUVAppDelegate.m" pinned="false" current="true" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/wruv/RUVAppDelegate.m">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-                  <folding>
-                    <element signature="n#!!doc" expanded="true" />
-                    <element signature="e#148#180#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="RUVAppDelegate.h" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/wruv/RUVAppDelegate.h">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="21" column="0" selection-start="453" selection-end="453" vertical-scroll-proportion="0.0">
-                  <folding>
-                    <element signature="n#!!doc" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="RUVScheduleViewController.m" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/wruv/RUVScheduleViewController.m">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-                  <folding>
-                    <element signature="n#!!doc" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="RUVScheduleViewController.h" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/wruv/RUVScheduleViewController.h">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-                  <folding>
-                    <element signature="n#!!doc" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="RUVWebViewController.m" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/wruv/RUVWebViewController.m">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="55" column="4" selection-start="1210" selection-end="1210" vertical-scroll-proportion="0.0">
-                  <folding>
-                    <element signature="n#!!doc" expanded="true" />
-                    <marker date="1355639445000" expanded="true" signature="330:332" placeholder="..." />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="RUVWebViewController.h" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/wruv/RUVWebViewController.h">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="20" column="0" selection-start="428" selection-end="428" vertical-scroll-proportion="0.0">
-                  <folding>
-                    <element signature="n#!!doc" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="RUVRSSListViewController.m" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/wruv/RUVRSSListViewController.m">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="11" column="32" selection-start="231" selection-end="231" vertical-scroll-proportion="0.0">
-                  <folding>
-                    <element signature="n#!!doc" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="RUVViewController.h" pinned="false" current="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/wruv/RUVViewController.h">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="29" column="1" selection-start="672" selection-end="672" vertical-scroll-proportion="0.5139594">
-                  <folding>
-                    <element signature="n#!!doc" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="RUVViewController.m" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/wruv/RUVViewController.m">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="39" column="42" selection-start="854" selection-end="854" vertical-scroll-proportion="0.0">
-                  <folding>
-                    <element signature="n#!!doc" expanded="true" />
-                    <element signature="e#151#180#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file leaf-file-name="RUVLeftViewController.m" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wruv/RUVLeftViewController.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="54" column="1" selection-start="1501" selection-end="1501" vertical-scroll-proportion="-1.1508728">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RUVLeftViewController.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wruv/RUVLeftViewController.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -205,6 +54,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitLogSettings">
+    <option name="myDateState">
+      <MyDateState />
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
@@ -257,6 +111,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="DirectoryView.Xcode" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -270,7 +125,7 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="wruv" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodePBXReferenceNode" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -284,47 +139,21 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="wruv" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodePBXReferenceNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ScheduleView" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodePBXReferenceNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wruv" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wruv" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodePBXReferenceNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RSS Views" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodePBXReferenceNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wruv" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wruv" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodePBXReferenceNode" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="LeftView" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodePBXReferenceNode" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wruv" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -337,27 +166,12 @@
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="wruv" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodePBXReferenceNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CenterView" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodePBXReferenceNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wruv" />
+              <option name="myItemId" value="MWFeedParser" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="DirectoryView.Xcode" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -371,7 +185,7 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
-    <property name="FullScreen" value="false" />
+    <property name="FullScreen" value="true" />
     <property name="OBJC.PRESERVED_TARGET_SELECTION" value="libMWFeedParser" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.searchVisible" value="true" />
@@ -440,7 +254,6 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32958803" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32958803" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32971016" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15692124" sideWeight="0.43991417" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21242061" sideWeight="0.6702899" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -451,6 +264,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32971016" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -490,6 +304,9 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
+    <option name="SHOW_DIRTY_RECURSIVELY" value="false" />
+    <option name="LIMIT_HISTORY" value="true" />
+    <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
     <option name="LAST_COMMIT_MESSAGE" />
@@ -520,23 +337,64 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wruv/RUVViewController.m">
+    <entry file="file://$PROJECT_DIR$/wruv/RUVAppDelegate.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="42" selection-start="854" selection-end="854" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#151#180#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wruv/RUVAppDelegate.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="0" selection-start="453" selection-end="453" vertical-scroll-proportion="0.39325842" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wruv/RUVScheduleViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wruv/RUVScheduleViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wruv/RUVWebViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="4" selection-start="1210" selection-end="1210" vertical-scroll-proportion="-0.038071066" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wruv/RUVWebViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="0" selection-start="428" selection-end="428" vertical-scroll-proportion="0.38071066" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wruv/RUVRSSListViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="32" selection-start="231" selection-end="231" vertical-scroll-proportion="-0.038071066" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wruv/RUVRSSListViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="118" selection-end="118" vertical-scroll-proportion="0.15228426" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wruv/RUVRSSDetailViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="56" selection-end="56" vertical-scroll-proportion="0.019035533" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wruv/RUVRSSDetailViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="56" selection-end="56" vertical-scroll-proportion="0.074906364" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wruv/RUVViewController.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="1" selection-start="672" selection-end="672" vertical-scroll-proportion="0.5139594">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
+        <state line="29" column="1" selection-start="672" selection-end="672" vertical-scroll-proportion="0.505618" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wruv/RUVViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="41" selection-start="811" selection-end="811" vertical-scroll-proportion="-0.037453182" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wruv/RUVLeftViewController.h">
@@ -550,105 +408,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wruv/RUVLeftViewController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="170" column="0" selection-start="4841" selection-end="4841" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#155#188#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wruv/RUVRSSDetailViewController.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="56" selection-end="56" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wruv/RUVRSSDetailViewController.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="56" selection-end="56" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#58#93#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wruv/RUVRSSListViewController.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="118" selection-end="118" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#56#79#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wruv/RUVRSSListViewController.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="32" selection-start="231" selection-end="231" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wruv/RUVWebViewController.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="428" selection-end="428" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wruv/RUVWebViewController.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="4" selection-start="1210" selection-end="1210" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <marker date="1355639445000" expanded="true" signature="330:332" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wruv/RUVScheduleViewController.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wruv/RUVScheduleViewController.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wruv/RUVAppDelegate.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="453" selection-end="453" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wruv/RUVAppDelegate.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#148#180#0" expanded="true" />
-          </folding>
+        <state line="54" column="1" selection-start="1501" selection-end="1501" vertical-scroll-proportion="-1.1508728">
+          <folding />
         </state>
       </provider>
     </entry>
