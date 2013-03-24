@@ -13,7 +13,7 @@
 @implementation RUVViewController
 
 
-@synthesize nowplaying, metadatas;
+@synthesize showLabel, trackLabel, artistLabel;
 @synthesize toolBar, playButton, pauseButton;
 @synthesize movieDuration;
 @synthesize allowsAirPlay;
@@ -30,8 +30,9 @@
 {
     [super viewDidLoad];
 
-    nowplaying.hidden = YES;
-    metadatas.text = @"";
+    showLabel.hidden = YES;
+    trackLabel.text = @"";
+    artistLabel.text = @"";
 
     MPVolumeView *volumeView = [[MPVolumeView alloc] initWithFrame:airplay.bounds];
     [airplay addSubview:volumeView];
@@ -98,7 +99,9 @@ static Float64 secondsWithCMTimeOrZeroIfInvalid(CMTime time)
         AVPlayerItem *pItem = (AVPlayerItem *)object;
         if (pItem.status == AVPlayerItemStatusReadyToPlay) {
             //NSLog(@"ready to play");
-            metadatas.text = @"";
+            showLabel.text = @"";
+            trackLabel.text = @"";
+            artistLabel.text = @"";
             [self playpause];
         }
     }
@@ -119,24 +122,40 @@ static Float64 secondsWithCMTimeOrZeroIfInvalid(CMTime time)
             if ([item.assetTrack.mediaType isEqual:AVMediaTypeAudio]) {
                 NSArray *meta = [playerItem timedMetadata];
                 for (AVMetadataItem *metaItem in meta) {
-                    if (nowplaying.hidden == YES) {
-                        nowplaying.hidden = NO;
+                    if (showLabel.hidden == YES) {
+                        showLabel.hidden = NO;
                     }
                     NSLog(@"%@", metaItem.stringValue);
                     NSString *source = metaItem.stringValue;
                     NSString *comma = @",";
                     NSString *openQuote = @"\"";
+                    NSString *openParentheses = @"(";
                     NSString *closeParentheses = @")";
                     NSScanner *aScanner = [NSScanner scannerWithString:source];
                     NSString *showName;
+                    NSString *artist;
                     NSString *trackTitle;
                     [aScanner scanUpToString:comma intoString:&showName];
+                    [aScanner scanUpToString:openParentheses intoString:NULL];
+                    [aScanner scanUpToString:@" " intoString:NULL];
+                    [aScanner scanString:@" " intoString:NULL];
+                    [aScanner scanUpToString:comma intoString:&artist];
                     [aScanner scanUpToString:openQuote intoString:NULL];
                     [aScanner scanUpToString:closeParentheses intoString:&trackTitle];
-                    NSLog(@"track title: %@ \nshow Name: %@", trackTitle, showName);
+                    NSLog(@"artist: %@\ntrack title: %@\nshow Name: %@", artist, trackTitle, showName);
 //                    metadatas.text = trackTitle;
-                    metadatas.text = @"Track Title";
-                    nowplaying.text = showName;
+                    if (!trackTitle){
+                        trackLabel.text = @"Track Title Unavailable";
+                    }else
+                        trackLabel.text = trackTitle;
+                    if (!artist){
+                        artistLabel.text = @"Artist Unavailable";
+                    }else
+                        artistLabel.text = artist;
+                    if (!showName){
+                        showLabel.text = @"Show Name Unavailable";
+                    }else
+                        showLabel.text = showName;
                 }
             }
         }
@@ -262,8 +281,9 @@ static Float64 secondsWithCMTimeOrZeroIfInvalid(CMTime time)
     self.toolBar = nil;
     self.playButton = nil;
     self.pauseButton = nil;
-    self.nowplaying = nil;
-    self.metadatas = nil;
+    self.showLabel = nil;
+    self.trackLabel = nil;
+    self.artistLabel = nil;
 
     [super viewDidUnload];
 }

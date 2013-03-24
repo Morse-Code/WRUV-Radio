@@ -22,8 +22,9 @@
     NSURL *wruvLive;
     NSString *m3uPath;
     IBOutlet UIView *airplay;
-    IBOutlet UILabel *nowplaying;
-    IBOutlet UILabel *metadatas;
+    IBOutlet UILabel *showLabel;
+    IBOutlet UILabel *trackLabel;
+    IBOutlet UILabel *artistLabel;
     IBOutlet UIToolbar *toolBar;
     IBOutlet UIBarButtonItem *playButton;
     IBOutlet UIBarButtonItem *pauseButton;
@@ -31,8 +32,9 @@
 
 
 @property (nonatomic) BOOL *allowsAirPlay;
-@property (nonatomic, retain) IBOutlet UILabel *nowplaying;
-@property (nonatomic, retain) IBOutlet UILabel *metadatas;
+@property (nonatomic, retain) IBOutlet UILabel *showLabel;
+@property (nonatomic, retain) IBOutlet UILabel *trackLabel;
+@property (nonatomic, retain) IBOutlet UILabel *artistLabel;
 @property (retain) IBOutlet UIToolbar *toolBar;
 @property (retain) IBOutlet UIBarButtonItem *playButton;
 @property (retain) IBOutlet UIBarButtonItem *pauseButton;
