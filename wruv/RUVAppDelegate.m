@@ -16,7 +16,6 @@
 @synthesize centerController = _centerController;
 @synthesize leftController = _leftController;
 
-
 - (BOOL)          application:(UIApplication *)application
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

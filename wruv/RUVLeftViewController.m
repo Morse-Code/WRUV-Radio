@@ -11,7 +11,6 @@
 #import "RUVRSSListViewController.h"
 #import "IIViewDeckController.h"
 
-
 @interface RUVLeftViewController ()
 
 
@@ -26,7 +25,6 @@
 @synthesize feeds = _feeds;
 @synthesize URLList = _URLList;
 @synthesize radioSection = _radioSection;
-
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -77,8 +75,7 @@
     if (section == 1) {
         return [self.feeds count];
     }
-    else
-    {
+    else {
         return 1;
     }
 }
@@ -90,8 +87,7 @@ titleForHeaderInSection:(NSInteger)section
     if (section == 1) {
         return @"UVM News and Events";
     }
-    else
-    {
+    else {
         return @"WRUV Radio";
     }
 
@@ -109,8 +105,7 @@ titleForHeaderInSection:(NSInteger)section
     if (indexPath.section == 0) {
         cell.textLabel.text = [self.radioSection objectAtIndex:(NSUInteger)indexPath.row];
     }
-    else
-    {
+    else {
         cell.textLabel.text = [self.feeds objectAtIndex:(NSUInteger)indexPath.row];
     }
 
@@ -167,27 +162,28 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
         self.viewDeckController.leftController = SharedAppDelegate.leftController;
 
     }
-    else if ([[[[tableView cellForRowAtIndexPath:indexPath] textLabel] text] isEqualToString:@"WRUV Show Schedule"]) {
+    else {
+        if ([[[[tableView cellForRowAtIndexPath:indexPath] textLabel] text] isEqualToString:@"WRUV Show Schedule"]) {
 
-    }
-    else
-    {
-        RUVRSSListViewController *feedViewController = [[RUVRSSListViewController alloc]
-                                                                                  initWithNibName:@"RootViewController"
-                                                                                           bundle:nil];
-        [feedViewController setFeedString:[self.URLList objectAtIndex:(NSUInteger)indexPath.row]];
-        UINavigationController
-                *navController = [[UINavigationController alloc] initWithRootViewController:feedViewController];
+        }
+        else {
+            RUVRSSListViewController *feedViewController = [[RUVRSSListViewController alloc]
+                                                                                      initWithNibName:@"RootViewController"
+                                                                                               bundle:nil];
+            [feedViewController setFeedString:[self.URLList objectAtIndex:(NSUInteger)indexPath.row]];
+            UINavigationController
+                    *navController = [[UINavigationController alloc] initWithRootViewController:feedViewController];
 
-        self.viewDeckController.centerController = navController;
+            self.viewDeckController.centerController = navController;
 
+        }
     }
 
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     [self.viewDeckController closeLeftViewBouncing:^(IIViewDeckController *controller)
-    {
-        [NSThread sleepForTimeInterval:(300 + arc4random() % 700) / 1000000.0]; // mimic delay... not really necessary
-    }];
+        {
+            [NSThread sleepForTimeInterval:(300 + arc4random() % 700) / 1000000.0]; // mimic delay... not really necessary
+        }];
 
 }
 

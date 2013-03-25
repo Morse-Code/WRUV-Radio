@@ -118,8 +118,7 @@
     if (parsedItems.count == 0) {
         self.title = @"Failed"; // Show failed message in title
     }
-    else
-    {
+    else {
         // Failed but some items parsed, so show and inform of error
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Parsing Incomplete"
                                                         message:@"There was an error during the parsing of this feed. Not all of the feed items could parsed."

@@ -9,7 +9,6 @@
 #import "RUVViewController.h"
 #import "IIViewDeckController.h"
 
-
 @implementation RUVViewController
 
 
@@ -18,7 +17,6 @@
 @synthesize movieDuration;
 @synthesize allowsAirPlay;
 @synthesize stationArt = _stationArt;
-
 
 - (void)didReceiveMemoryWarning
 {
@@ -38,9 +36,7 @@
     [airplay addSubview:volumeView];
     [volumeView setShowsVolumeSlider:YES];
     [volumeView setShowsRouteButton:YES];
-    [NSThread detachNewThreadSelector:@selector(downloadAndLoadImage)
-    toTarget:self
-    withObject:nil];
+    [NSThread detachNewThreadSelector:@selector(downloadAndLoadImage) toTarget:self withObject:nil];
 
     [self setTitle:@"WRUV-Radio"];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]
@@ -74,9 +70,9 @@
 }
 
 static Float64 secondsWithCMTimeOrZeroIfInvalid(CMTime time)
-{
-    return CMTIME_IS_INVALID(time) ? 0.0f : CMTimeGetSeconds(time);
-}
+    {
+        return CMTIME_IS_INVALID(time) ? 0.0f : CMTimeGetSeconds(time);
+    }
 
 - (Float64)durationInSeconds
 {
@@ -144,18 +140,24 @@ static Float64 secondsWithCMTimeOrZeroIfInvalid(CMTime time)
                     [aScanner scanUpToString:closeParentheses intoString:&trackTitle];
                     NSLog(@"artist: %@\ntrack title: %@\nshow Name: %@", artist, trackTitle, showName);
 //                    metadatas.text = trackTitle;
-                    if (!trackTitle){
+                    if (!trackTitle) {
                         trackLabel.text = @"Track Title Unavailable";
-                    }else
+                    }
+                    else {
                         trackLabel.text = trackTitle;
-                    if (!artist){
+                    }
+                    if (!artist) {
                         artistLabel.text = @"Artist Unavailable";
-                    }else
+                    }
+                    else {
                         artistLabel.text = artist;
-                    if (!showName){
+                    }
+                    if (!showName) {
                         showLabel.text = @"Show Name Unavailable";
-                    }else
+                    }
+                    else {
                         showLabel.text = showName;
+                    }
                 }
             }
         }
@@ -192,8 +194,7 @@ static Float64 secondsWithCMTimeOrZeroIfInvalid(CMTime time)
     if ([self isPlaying]) {
         [self showPauseButton];
     }
-    else
-    {
+    else {
         [self showPlayButton];
     }
 }
@@ -205,8 +206,7 @@ static Float64 secondsWithCMTimeOrZeroIfInvalid(CMTime time)
         [player pause];
         [self showPlayButton];
     }
-    else
-    {
+    else {
         [player play];
         [self showPauseButton];
     }

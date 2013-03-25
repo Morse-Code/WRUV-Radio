@@ -22,7 +22,6 @@ const NSString *textOnly = @"http://viewtext.org/api/text?url={url}&format={form
 @synthesize webView = _webView;
 @synthesize activityIndicator = _activityIndicator;
 
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];

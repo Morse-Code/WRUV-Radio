@@ -10,7 +10,6 @@
 #import <MediaPlayer/MediaPlayer.h>
 #import <AVFoundation/AVFoundation.h>
 
-
 @class AVPlayer;
 @class AVPlayerItem;
 
@@ -63,9 +62,5 @@
 - (IBAction)play:(id)sender;
 
 - (IBAction)pause:(id)sender;
-
-//@property (nonatomic, assign) IBOutlet UIView *playControl;
-//@property (nonatomic, assign) IBOutlet UIToolbar *controlBar;
-//@property (nonatomic, assign) IBOutlet UIBarButtonItem *menuButton;
 
 @end

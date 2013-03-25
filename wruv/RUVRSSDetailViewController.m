@@ -59,8 +59,7 @@ typedef enum
     if (item.summary) {
         self.summaryString = [item.summary stringByConvertingHTMLToPlainText];
     }
-    else
-    {
+    else {
         self.summaryString = @"[No Summary]";
     }
 
@@ -110,8 +109,7 @@ typedef enum
 
         // Display
         switch (indexPath.section) {
-            case SectionHeader:
-            {
+            case SectionHeader: {
 
                 // Header
                 switch (indexPath.row) {
@@ -131,8 +129,7 @@ typedef enum
                 break;
 
             }
-            case SectionDetail:
-            {
+            case SectionDetail: {
 
                 // Summary
                 cell.textLabel.text = self.summaryString;
@@ -156,8 +153,7 @@ typedef enum
         return 34;
 
     }
-    else
-    {
+    else {
 
         // Get height of summary
         NSString *summary = @"[No Summary]";
